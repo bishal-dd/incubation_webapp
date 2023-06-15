@@ -1,4 +1,3 @@
-@include('user.includes.loader')
         <!-- Start header -->
         <header id="header" class="site-header header-style-3">
             <nav class="navigation navbar navbar-default">
@@ -16,12 +15,8 @@
                         <button class="close-navbar"><i class="ti-close"></i></button>
                         <ul class="nav navbar-nav">
                             <li class="menu-item-has-children">
-                                <a href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index-2.html">Home Default</a></li>
-                                    <li><a href="index-3.html">Home style 2</a></li>
-                                    <li><a href="index-4.html">Home style 3</a></li>
-                                </ul>
+                                <a href="/">Home</a>
+                                
                             </li>
                             <li><a href="about.html">About</a></li>
                             <li class="menu-item-has-children">
@@ -75,31 +70,11 @@
                                 </ul>
                             </li>
                             <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/login">Login</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 
-                    <div class="search-contact">
-                        <div class="header-search-area">
-                            <div class="header-search-form">
-                                <form class="form">
-                                    <div>
-                                        <input type="text" class="form-control" placeholder="Search here">
-                                    </div>
-                                    <button type="submit" class="btn"><i class="ti-search"></i></button>
-                                </form>
-                            </div>
-                            <div>
-                                <button class="btn open-btn"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="call">
-                                <i class="fi flaticon-call"></i>
-                                <p>Call us anytime</p>
-                                <h5>+65487441584</h5>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div><!-- end of container -->
             </nav>
         </header>
