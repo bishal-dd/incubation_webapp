@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>About us</h2>
+                        <h2>About Us</h2>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->

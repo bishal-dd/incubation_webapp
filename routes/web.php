@@ -62,3 +62,9 @@ Route::get('/dashboard/add_incubates', function () {
 Route::get('/dashboard/add_admin', function () {
     return view('admin/add_admin/add_admin');
 });
+Route::get('/dashboard/add_stakeholder', function () {
+    return view('admin/add_stakeholder/add_stakeholder');
+});
+Route::get('/stakeholder', function () {
+    return view('user/stakeholder/stakeholder');
+});
