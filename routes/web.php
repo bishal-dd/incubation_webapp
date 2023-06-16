@@ -3,10 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController\LoginController;
 use App\Http\Controllers\SliderController\SliderController;
+use App\Http\Controllers\HomeController\HomeController;
 
-Route::get("/", function () {
-    return view("user/home/home");
-});
+Route::get("/", [HomeController::class, "home"])->name("home");
 
 Route::get("/login", function () {
     return view("user/login/login");
@@ -15,10 +14,6 @@ Route::get("/login", function () {
 Route::post("/userlogin", [LoginController::class, "userlogin"])->name(
     "userlogin"
 );
-
-Route::get("/dashboard", function () {
-    return view("admin/dashboard/dashboard");
-});
 
 Route::get("/advisory", function () {
     return view("user/advisory/advisory");

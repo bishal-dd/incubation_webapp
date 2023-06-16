@@ -6,11 +6,12 @@
         <section class="hero-slider hero-style-3">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
+                    @foreach($Slider as $Sliders )
                     <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-4.jpg">
+                        <div class="slide-inner slide-bg-image" data-background="/slider_images/{{$Sliders->image}}">
                             <div class="container">
                                 <div data-swiper-parallax="300" class="slide-title">
-                                    <h2>Quality Never Goes out of Style</h2>
+                                    <h2>{{$Sliders->text}}</h2>
                                 </div>
                                 <div data-swiper-parallax="400" class="slide-text">
                                     <p>Recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa</p>
@@ -23,24 +24,7 @@
                             </div>
                         </div> <!-- end slide-inner --> 
                     </div> <!-- end swiper-slide -->
-
-                    <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-2.jpg">
-                            <div class="container">
-                                <div data-swiper-parallax="300" class="slide-title">
-                                    <h2>The Best Move you will Ever Make</h2>
-                                </div>
-                                <div data-swiper-parallax="400" class="slide-text">
-                                    <p>Recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa</p>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div data-swiper-parallax="500" class="slide-btns">
-                                    <a href="#" class="theme-btn">Our services</a> 
-                                    <a href="#" class="theme-btn-s2">More about us</a> 
-                                </div>
-                            </div>
-                        </div> <!-- end slide-inner --> 
-                    </div> <!-- end swiper-slide -->
+                    @endforeach
                 </div>
                 <!-- end swiper-wrapper -->
 
