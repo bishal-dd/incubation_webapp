@@ -251,11 +251,48 @@
               <i class="bi bi-circle"></i><span>Add Advisory</span>
             </a>
           </li>
+          <li>
+            <a href="/dashboard/add_about">
+              <i class="bi bi-circle"></i><span>Add About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard/add_incubates">
+              <i class="bi bi-circle"></i><span>Add Incubates</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard/add_mentor">
+              <i class="bi bi-circle"></i><span>Add Mentor</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard/add_stakeholder">
+              <i class="bi bi-circle"></i><span>Add Stakeholder</span>
+            </a>
+          </li>
          
           
         </ul>
       </li><!-- End Forms Nav -->
       
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/dashboard/add_admin">
+              <i class="bi bi-circle"></i><span>Add Admin</span>
+            </a>
+          </li>
+        
+        
+         
+         
+          
+        </ul>
+      </li><!-- End Forms Nav -->
 
   
 
