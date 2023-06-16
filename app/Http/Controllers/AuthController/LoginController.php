@@ -21,52 +21,67 @@ class LoginController extends Controller
             return redirect("/dashboard");
         } else {
             return redirect("/login")->withErrors([
-                'email' => 'Invalid credentials',
+                "email" => "Invalid credentials",
             ]);
         }
     }
 
     function add_admin(Request $request)
-{
-    $request->validate([
-        "name" => "required",
-        "email" => "required",
-    ]);
+    {
+        $request->validate([
+            "name" => "required",
+            "email" => "required",
+        ]);
 
-    $check_email = User::where('email', $request->email)->get();
-    if ($check_email->count() > 0) {
-        $error = "This email already exists";
-        return redirect('/dashboard/add_admin')->with('error', $error);
+        $check_email = User::where("email", $request->email)->get();
+        if ($check_email->count() > 0) {
+            $error = "This email already exists";
+            return redirect("/dashboard/add_admin")->with("error", $error);
+        }
+
+        $password = "Admin@123"; // Retrieve the plain text password from the request or generate it dynamically
+        $hashedPassword = Hash::make($password);
+
+        $newUser = User::create([
+            "name" => $request->name,
+            "email" => $request->email,
+            "phone_no" => $request->contact_no,
+            "status" => $request->add_status,
+            "password" => $hashedPassword, // Hash the password before saving
+            "created_at" => date("Y-m-d h:i:s"),
+            "created_by" => $request->current_user,
+        ]);
+
+        Mail::to($newUser->email)->send(new WelcomeEmail($newUser, $password));
+
+        return redirect("/dashboard/add_admin");
     }
 
-    $password = "Admin@123"; // Retrieve the plain text password from the request or generate it dynamically
-    $hashedPassword = Hash::make($password);
+    function update_admin(Request $request)
+    {
+        $data = [
+            "name" => $request->edit_name,
+            "email" => $request->edit_email,
+            "phone_no" => $request->edit_contact_no,
+            "status" => $request->status,
+            "updated_at" => date("Y-m-d h:i:s"),
+            "updated_by" => $request->edit_current_user,
+        ];
 
-    $newUser = User::create([
-        "name" => $request->name,
-        "email" => $request->email,
-        "phone_no" => $request->contact_no,
-        "status"   => $request->add_status,
-        "password" => $hashedPassword // Hash the password before saving
-    ]);
-
-    Mail::to($newUser->email)->send(new WelcomeEmail($newUser, $password));
-
-
-    return redirect('/dashboard/add_admin');
-}
-
-
-    function get_admin(){
-
+        User::where("id", $request->edit_id)->update($data);
+        return redirect("/dashboard/add_admin");
+    }
+    function get_admin()
+    {
         $users = User::get();
 
-        return view('/admin/add_admin/add_admin', compact('users'));
+        return view("/admin/add_admin/add_admin", compact("users"));
     }
 
-    function logout(){
+    function logout()
+    {
         \Session::flush();
         \Auth::logout();
-        return redirect('/');
+        return redirect("/");
     }
 }

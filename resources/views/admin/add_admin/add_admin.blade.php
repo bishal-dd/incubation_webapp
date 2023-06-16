@@ -52,6 +52,8 @@
                         Inactive
                       </label>
                 </div>
+                <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
+
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                       <button type="submit" class="btn btn-primary">Submit</button>
@@ -76,19 +78,20 @@
                       <div class="modal-body">
   
                          <!-- Vertical Form -->
-                <form action="/dashboard/add_admin" method="POST" class="row g-3">
+                <form action="/dashboard/update_admin" method="POST" class="row g-3">
                   @csrf
+                  @method('PUT')
                   <div class="col-12">
                     <label for="inputNanme4" class="form-label">Name</label>
-                    <input type="text" name="name" class="form-control" id="edit_name">
+                    <input type="text" name="edit_name" class="form-control" id="edit_name">
                   </div>
                   <div class="col-12">
                     <label for="inputPassword4" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="edit_email">
+                    <input type="email" name="edit_email" class="form-control" id="edit_email">
                   </div>
                   <div class="col-12">
                     <label for="inputPassword4" class="form-label">Contact No.</label>
-                    <input type="number" name="contact_no" class="form-control" id="edit_number">
+                    <input type="number" name="edit_contact_no" class="form-control" id="edit_number">
                   </div>
                   <div class="col-12">
                     <label for="inputPassword4" class="form-label">Status:</label>
@@ -102,6 +105,10 @@
                           Inactive
                         </label>
                   </div>
+                  <input type="hidden" name="edit_current_user" class="form-control" id="edit_current_user" value="{{ Auth::user()->id }}">
+                  <input type="hidden" name="edit_id" class="form-control" id="edit_id" >
+
+
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -151,7 +158,7 @@
                       <td><a href="#" class="text-primary">{{ $user->email }}</a></td>
                       <td>{{ $user->phone_no }}</td>
                       <td><span class="badge bg-success">{{ $user->status }}</span></td>
-                      <td><button type="button" onClick="showedit({{$user}})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>
+                      <td><button type="button" onClick="showedit({{ $user }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>
                       </td>
                     </tr>
                     @endforeach
@@ -169,13 +176,14 @@
 
   function showedit(data){
     $('#edit_name').val(data.name);
+    $('#edit_id').val(data.id);
     $('#edit_email').val(data.email);
     $('#edit_number').val(data.phone_no);
     if (data.status == 'Active') {
-            $('#edit_status1').prop('checked', true);
+      $('#edit_status1').prop('checked', true);
     } else {
-            $('#edit_status2').prop('checked', true);
-        }
+      $('#edit_status2').prop('checked', true);
+    }
   }
-  </script>
+</script>
 @include('admin.common.js')

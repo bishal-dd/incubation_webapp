@@ -19,7 +19,7 @@ class User extends Authenticatable
      */
     public $timestamps = false;
     protected $table = "t_admin_master";
-    protected $fillable = ["name", "email", "password", "phone_no"];
+    protected $fillable = ["name", "email", "password", "phone_no", "status", "created_at", "created_by",  "updated_by", "updated_at"];
 
     public function isAdmin()
     {
