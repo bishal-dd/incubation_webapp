@@ -246,6 +246,8 @@
             </a>
           </li>
           <li>
+            <a href="/dashboard/add_about">
+              <i class="bi bi-circle"></i><span>Add About Us</span>
             <a href="/dashboard/add_advisory">
               <i class="bi bi-circle"></i><span>Add Advisory</span>
             </a>

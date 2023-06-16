@@ -18,11 +18,11 @@
                                 <a href="/">Home</a>
                                 
                             </li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="/about">About</a></li>
                             <li class="menu-item-has-children">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="/about">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="testimonials.html">Testimonials</a></li>
                                     <li><a href="testimonials-s2.html">Testimonials style 2</a></li>

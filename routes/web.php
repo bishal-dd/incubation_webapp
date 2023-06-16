@@ -44,3 +44,9 @@ Route::get('/mentor', function () {
 Route::get('/dashboard/add_mentor', function () {
 return view('admin/add_mentor/add_mentor');
 });
+Route::get('/about', function () {
+    return view('user/about/about');
+});
+Route::get('/dashboard/add_about', function () {
+    return view('admin/add_about/add_about');
+});
