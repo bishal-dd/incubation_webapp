@@ -233,6 +233,7 @@
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
+      
 
 
       <li class="nav-item">
@@ -251,16 +252,29 @@
             <a href="/dashboard/add_advisory">
               <i class="bi bi-circle"></i><span>Add Advisory</span>
             </a>
-          </li>
-         
+            <a href="/dashboard/add_incubates">
+              <i class="bi bi-circle"></i><span>Add Incubates</span>
+            </a>
             <a href="/dashboard/add_mentor">
               <i class="bi bi-circle"></i><span>Add Mentor</span>
             </a>
           </li>
-          
-         
         </ul>
       </li><!-- End Forms Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav2" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/dashboard/add_admin">
+              <i class="bi bi-circle"></i><span>Add Admin</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- End Forms Nav -->
+      
 
   
 
