@@ -27,7 +27,7 @@
                     <div class="modal-body">
 
                        <!-- Vertical Form -->
-              <form class="row g-3">
+              <form action="/add_admin" method="POST" class="row g-3">
                 @csrf
                 <div class="col-12">
                   <label for="inputNanme4" class="form-label">Name</label>
@@ -39,13 +39,11 @@
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Contact No.</label>
-                  <input type="number" name="number" class="form-control" id="inputText">
+                  <input type="number" name="contact_no" class="form-control" id="inputText">
                 </div>
-                      
-                  
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </form><!-- Vertical Form -->
                       
@@ -80,13 +78,15 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($users as $user)
                     <tr>
-                      <th scope="row"><a href="#">#2457</a></th>
-                      <td>Brandon Jacob</td>
-                      <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                      <td>$64</td>
+                      <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
+                      <td>{{ $user->name }}</td>
+                      <td><a href="#" class="text-primary">{{ $user->email }}</a></td>
+                      <td>{{ $user->phone_no }}</td>
                       <td><span class="badge bg-success">Approved</span></td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
 

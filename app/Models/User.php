@@ -21,6 +21,11 @@ class User extends Authenticatable
     protected $table = "t_admin_master";
     protected $fillable = ["name", "email", "password", "phone_no"];
 
+    public function isAdmin()
+    {
+        return true;
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
