@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController\LoginController;
+use App\Http\Controllers\SliderController\SliderController;
 
 Route::get("/", function () {
     return view("user/home/home");
@@ -55,10 +56,12 @@ Route::group(["middleware" => ["admin"]], function () {
         LoginController::class,
         "get_admin",
     ])->name("get_admin");
+
     Route::post("/dashboard/add_admin", [
         LoginController::class,
         "add_admin",
     ])->name("add_admin");
+
     Route::put("/dashboard/update_admin", [
         LoginController::class,
         "update_admin",
@@ -75,9 +78,17 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard/add_mentor", function () {
         return view("admin/add_mentor/add_mentor");
     });
-    Route::get("/dashboard/add_slider_image", function () {
-        return view("admin/add_slider_image/add_slider_image");
-    });
+
+    // Slider functions
+    Route::post("/dashboard/add_slider", [
+        SliderController::class,
+        "add_slider",
+    ])->name("add_slider");
+
+    Route::get("/dashboard/add_slider_image", [
+        SliderController::class,
+        "get_slider",
+    ])->name("get_slider");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

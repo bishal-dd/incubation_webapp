@@ -26,24 +26,26 @@
                     </div>
                     <div class="modal-body">
                <!-- Vertical Form -->
-              <form class="row g-3">
+              <form action="/dashboard/add_slider" method="POST" enctype="multipart/form-data" class="row g-3">
+                @csrf
                 <div class="col-12">
                   <label for="inputNanme4" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="inputText">
+                  <input type="text" name="name" class="form-control" id="inputText">
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Slider Image</label>
-                  <input class="form-control" type="file" id="formFile">
+                  <input class="form-control" name="slider_image" type="file" id="formFile">
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Text for Image</label>
-                  <textarea class="form-control" style="height: 100px"></textarea>
+                  <textarea class="form-control" name="slider_text" style="height: 100px"></textarea>
                 </div>
-                      
+                <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
+ 
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </form><!-- Vertical Form -->
                   </div>
@@ -68,20 +70,22 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Customer</th>
-                      <th scope="col">Product</th>
-                      <th scope="col">Price</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Slider Text</th>
+                      <th scope="col">Image</th>
                       <th scope="col">Status</th>
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($data as $datas)
                     <tr>
-                      <th scope="row"><a href="#">#2457</a></th>
-                      <td>Brandon Jacob</td>
-                      <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                      <td>$64</td>
+                      <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
+                      <td>{{$datas->name}}</td>
+                      <td><a href="#" class="text-primary">{{$datas->text}}</a></td>
+                      <td><img src="/slider_images/{{$datas->image}}" width="90"></td>
                       <td><span class="badge bg-success">Approved</span></td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
 
