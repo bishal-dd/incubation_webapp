@@ -69,7 +69,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/mentor">Mentor</a></li>
                             <li><a href="/login">Login</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
