@@ -20,20 +20,6 @@
                             </li>
                             <li><a href="/about">About Us</a></li>
                             <li class="menu-item-has-children">
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="/about">About Us</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="testimonials-s2.html">Testimonials style 2</a></li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="shop-single.html">Shop single</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
                                 <a href="#">Blog</a>
                                 <ul class="sub-menu">
                                     <li><a href="blog.html">Blog</a></li>
@@ -53,6 +39,8 @@
                             <li><a href="/mentor">Mentor</a></li>
                             <li><a href="/login">Login</a></li>
                             <li><a href="/event">Events</a></li>
+                            <li><a href="/login">Incubates</a></li>
+                            <li><a href="/stakeholder">Stakeholder</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 
