@@ -5,6 +5,8 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeEmail;
 
 class LoginController extends Controller
 {
@@ -25,24 +27,35 @@ class LoginController extends Controller
     }
 
     function add_admin(Request $request)
-    {
-        
-        $request->validate([
-            "name" => "required",
-            "email" => "required",
-        ]);
-        
+{
+    $request->validate([
+        "name" => "required",
+        "email" => "required",
+    ]);
 
-        User::create([
-            "name" => $request->name,
-            "email" => $request->email,
-            "phone_no" => $request->contact_no,
-            "password" => Hash::make("Admin@123") // Hash the password before saving
-        ]);
-
-        return redirect('/dashboard/add_admin');
-
+    $check_email = User::where('email', $request->email)->get();
+    if ($check_email->count() > 0) {
+        $error = "This email already exists";
+        return redirect('/dashboard/add_admin')->with('error', $error);
     }
+
+    $password = "Admin@123"; // Retrieve the plain text password from the request or generate it dynamically
+    $hashedPassword = Hash::make($password);
+
+    $newUser = User::create([
+        "name" => $request->name,
+        "email" => $request->email,
+        "phone_no" => $request->contact_no,
+        "status"   => $request->add_status,
+        "password" => $hashedPassword // Hash the password before saving
+    ]);
+
+    Mail::to($newUser->email)->send(new WelcomeEmail($newUser, $password));
+
+
+    return redirect('/dashboard/add_admin');
+}
+
 
     function get_admin(){
 
