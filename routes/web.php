@@ -50,3 +50,9 @@ Route::get('/about', function () {
 Route::get('/dashboard/add_about', function () {
     return view('admin/add_about/add_about');
 });
+Route::get('/incubates', function () {
+    return view('user/incubates/incubates');
+});
+Route::get('/dashboard/add_incubates', function () {
+    return view('admin/add_incubates/add_incubates');
+});
