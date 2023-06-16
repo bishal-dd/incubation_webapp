@@ -34,3 +34,9 @@ Route::get('/advisory', function () {
 Route::get('/dashboard/add_advisory', function () {
     return view('admin/add_advisory/add_advisory');
 });
+Route::get('/mentor', function () {
+    return view('user/mentor/mentor');
+});
+Route::get('/dashboard/add_mentor', function () {
+return view('admin/add_mentor/add_mentor');
+});

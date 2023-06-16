@@ -251,6 +251,10 @@
             </a>
           </li>
          
+            <a href="/dashboard/add_mentor">
+              <i class="bi bi-circle"></i><span>Add Mentor</span>
+            </a>
+          </li>
           
          
         </ul>
