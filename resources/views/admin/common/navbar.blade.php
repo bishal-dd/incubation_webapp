@@ -245,6 +245,11 @@
               <i class="bi bi-circle"></i><span>Add Slider Image</span>
             </a>
           </li>
+          <li>
+            <a href="/dashboard/add_about">
+              <i class="bi bi-circle"></i><span>Add About Us</span>
+            </a>
+          </li>
          
           
          

@@ -22,3 +22,9 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/add_slider_image', function () {
     return view('admin/add_slider_image/add_slider_image');
 });
+Route::get('/about', function () {
+    return view('user/about/about');
+});
+Route::get('/dashboard/add_about', function () {
+    return view('admin/add_about/add_about');
+});
