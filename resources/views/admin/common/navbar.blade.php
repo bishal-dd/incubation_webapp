@@ -237,7 +237,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>Actions</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -248,9 +248,15 @@
           <li>
             <a href="/dashboard/add_about">
               <i class="bi bi-circle"></i><span>Add About Us</span>
+            <a href="/dashboard/add_advisory">
+              <i class="bi bi-circle"></i><span>Add Advisory</span>
             </a>
           </li>
          
+            <a href="/dashboard/add_mentor">
+              <i class="bi bi-circle"></i><span>Add Mentor</span>
+            </a>
+          </li>
           
          
         </ul>

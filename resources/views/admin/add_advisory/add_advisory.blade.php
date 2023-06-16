@@ -25,31 +25,39 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-               <!-- Vertical Form -->
+
+                       <!-- Vertical Form -->
               <form class="row g-3">
                 <div class="col-12">
                   <label for="inputNanme4" class="form-label">Name</label>
                   <input type="text" class="form-control" id="inputText">
                 </div>
                 <div class="col-12">
-                  <label for="inputEmail4" class="form-label">Slider Image</label>
+                  <label for="inputEmail4" class="form-label">Photo</label>
                   <input class="form-control" type="file" id="formFile">
                 </div>
                 <div class="col-12">
-                  <label for="inputPassword4" class="form-label">Text for Image</label>
-                  <textarea class="form-control" style="height: 100px"></textarea>
+                  <label for="inputPassword4" class="form-label">Designation</label>
+                  <input type="text" class="form-control" id="inputText">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Affiliation</label>
+                  <input type="text" class="form-control" id="inputText">
                 </div>
                       
-                    </div>
+                  
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </form><!-- Vertical Form -->
+                      
+                    </div>
+                   
                   </div>
                 </div>
               </div><!-- End Modal -->
-              <button type="button" class="btn btn-primary text-center" data-bs-toggle="modal" data-bs-target="#myModal">Add Slider Image</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Advisory</button>
             </div>
           </div>
         </div>
