@@ -19,6 +19,7 @@
   <div style="width: 400px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
     <h2 style="text-align: center; margin-bottom: 20px;">Login</h2>
     <form action="/userlogin" method="POST">
+      @csrf
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
