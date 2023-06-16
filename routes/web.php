@@ -53,18 +53,24 @@ Route::get("/about", function () {
 Route::get("/dashboard/add_about", function () {
     return view("admin/add_about/add_about");
 });
-Route::get('/incubates', function () {
-    return view('user/incubates/incubates');
+Route::get("/incubates", function () {
+    return view("user/incubates/incubates");
 });
-Route::get('/dashboard/add_incubates', function () {
-    return view('admin/add_incubates/add_incubates');
+Route::get("/dashboard/add_incubates", function () {
+    return view("admin/add_incubates/add_incubates");
 });
-Route::get('/dashboard/add_admin', function () {
-    return view('admin/add_admin/add_admin');
+Route::get("/dashboard/add_admin", function () {
+    return view("admin/add_admin/add_admin");
 });
-Route::get('/dashboard/add_stakeholder', function () {
-    return view('admin/add_stakeholder/add_stakeholder');
+Route::get("/dashboard/add_stakeholder", function () {
+    return view("admin/add_stakeholder/add_stakeholder");
 });
-Route::get('/stakeholder', function () {
-    return view('user/stakeholder/stakeholder');
+Route::get("/stakeholder", function () {
+    return view("user/stakeholder/stakeholder");
+});
+Route::get("/advisory", function () {
+    return view("user/advisory/advisory");
+});
+Route::get("/dashboard/add_advisory", function () {
+    return view("admin/add_advisory/add_advisory");
 });

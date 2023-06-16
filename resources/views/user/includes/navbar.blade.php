@@ -36,7 +36,6 @@
                                 </ul>
                             </li>
                             <li><a href="/advisory">Advisory</a></li>
-                            <li><a href="/mentor">Mentor</a></li>
                             <li><a href="/login">Login</a></li>
                             <li><a href="/login">Incubates</a></li>
                             <li><a href="/stakeholder">Stakeholder</a></li>
