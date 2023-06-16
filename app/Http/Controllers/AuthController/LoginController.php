@@ -11,7 +11,7 @@ class LoginController extends Controller
     {
         $request->validate([
             "username" => "required",
-            "password" => "requried",
+            "password" => "required",
         ]);
 
         dd($request->all());
