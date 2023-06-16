@@ -245,6 +245,11 @@
               <i class="bi bi-circle"></i><span>Add Slider Image</span>
             </a>
           </li>
+          <li>
+            <a href="/dashboard/add_advisory">
+              <i class="bi bi-circle"></i><span>Add Advisory</span>
+            </a>
+          </li>
          
           
          

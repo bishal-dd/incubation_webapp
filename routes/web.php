@@ -27,3 +27,9 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/add_slider_image', function () {
     return view('admin/add_slider_image/add_slider_image');
 });
+Route::get('/advisory', function () {
+    return view('user/advisory/advisory');
+});
+Route::get('/dashboard/add_advisory', function () {
+    return view('admin/add_advisory/add_advisory');
+});
