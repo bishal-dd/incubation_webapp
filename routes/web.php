@@ -56,3 +56,6 @@ Route::get('/incubates', function () {
 Route::get('/dashboard/add_incubates', function () {
     return view('admin/add_incubates/add_incubates');
 });
+Route::get('/dashboard/add_admin', function () {
+    return view('admin/add_admin/add_admin');
+});
