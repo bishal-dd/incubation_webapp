@@ -18,7 +18,7 @@
                                 <a href="/">Home</a>
                                 
                             </li>
-                            <li><a href="/about">About</a></li>
+                            <li><a href="/about">About Us</a></li>
                             <li class="menu-item-has-children">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
