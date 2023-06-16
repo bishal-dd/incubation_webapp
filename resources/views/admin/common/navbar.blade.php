@@ -257,6 +257,10 @@
               <i class="bi bi-circle"></i><span>Add Mentor</span>
             </a>
           </li>
+          <a href="/dashboard/add_stakeholder">
+              <i class="bi bi-circle"></i><span>Add Stakeholder</span>
+            </a>
+          </li>
           
          
         </ul>

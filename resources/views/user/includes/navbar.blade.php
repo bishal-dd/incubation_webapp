@@ -72,6 +72,7 @@
                             <li><a href="/advisory">Advisory</a></li>
                             <li><a href="/mentor">Mentor</a></li>
                             <li><a href="/login">Login</a></li>
+                            <li><a href="/stakeholder">Stakeholder</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 

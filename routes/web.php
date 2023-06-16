@@ -46,3 +46,9 @@ Route::get('/about', function () {
 Route::get('/dashboard/add_about', function () {
     return view('admin/add_about/add_about');
 });
+Route::get('/dashboard/add_stakeholder', function () {
+    return view('admin/add_stakeholder/add_stakeholder');
+});
+Route::get('/stakeholder', function () {
+    return view('user/stakeholder/stakeholder');
+});
