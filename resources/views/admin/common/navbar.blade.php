@@ -256,9 +256,11 @@
             <a href="/dashboard/add_mentor">
               <i class="bi bi-circle"></i><span>Add Mentor</span>
             </a>
+            <a href="/dashboard/add_event">
+              <i class="bi bi-circle"></i><span>Add Event</span>
+            </a>
           </li>
           
-         
         </ul>
       </li><!-- End Forms Nav -->
 

@@ -18,11 +18,11 @@
                                 <a href="/">Home</a>
                                 
                             </li>
-                            <li><a href="/about">About</a></li>
+                            <li><a href="/about">About Us</a></li>
                             <li class="menu-item-has-children">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
-                                    <li><a href="/about">About</a></li>
+                                    <li><a href="/about">About Us</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="testimonials.html">Testimonials</a></li>
                                     <li><a href="testimonials-s2.html">Testimonials style 2</a></li>
@@ -31,26 +31,6 @@
                                     <li><a href="404.html">404</a></li>
                                     <li><a href="shop.html">Shop</a></li>
                                     <li><a href="shop-single.html">Shop single</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Services</a>
-                                <ul class="sub-menu">
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="services-s2.html">Services style 2</a></li>
-                                    <li><a href="service-single.html">Mechanical Engineering</a></li>
-                                    <li><a href="oil-gas.html">Oil And Gas</a></li>
-                                    <li><a href="power-energy.html">Power And Energy</a></li>
-                                    <li><a href="sanitary-plumbing.html">Sanitary & Plumbing</a></li>
-                                    <li><a href="electrical-power.html">Electrical Power</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Projects</a>
-                                <ul class="sub-menu">
-                                    <li><a href="portfolio.html">Projects</a></li>
-                                    <li><a href="portfolio-s2.html">Projects style 2</a></li>
-                                    <li><a href="project-single.html">Project single</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
@@ -72,6 +52,7 @@
                             <li><a href="/advisory">Advisory</a></li>
                             <li><a href="/mentor">Mentor</a></li>
                             <li><a href="/login">Login</a></li>
+                            <li><a href="/event">Events</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 

@@ -50,3 +50,9 @@ Route::get('/about', function () {
 Route::get('/dashboard/add_about', function () {
     return view('admin/add_about/add_about');
 });
+Route::get('/event', function () {
+    return view('user/event/event');
+});
+Route::get('/dashboard/add_event', function () {
+    return view('admin/add_event/add_event');
+    });
