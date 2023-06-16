@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,10 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('user/login/login');
 });
+
+Route::post("/userlogin", [LoginController::class, "userlogin"])->name(
+    "userlogin"
+);
 
 Route::get('/dashboard', function () {
     return view('admin/dashboard/dashboard');
