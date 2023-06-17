@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" name="photo" type="file" id="formFile">
+                  <input class="form-control" name="photo" type="file" accept="image/*" id="formFile">
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Designation</label>
@@ -68,26 +68,30 @@
              
 
               <div class="card-body">
-                <h5 class="card-title">Slider Images</h5>
+                <h5 class="card-title">Name</h5>
 
                 <table class="table table-borderless datatable">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Customer</th>
-                      <th scope="col">Product</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Status</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Designation</th>
+                      <th scope="col">Affiliation</th>
+                      <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($data as $datas )
                     <tr>
-                      <th scope="row"><a href="#">#2457</a></th>
-                      <td>Brandon Jacob</td>
-                      <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                      <td>$64</td>
-                      <td><span class="badge bg-success">Approved</span></td>
+                      <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
+                      <td>{{$datas->name}}</td>
+                      <td><img src="/advisor_images/{{$datas->photo}}" width="90"></td>
+                      <td>{{$datas->designation}}</td>
+                      <td>{{$datas->affiliation}}</td>
+                      <td><button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button></td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
 
