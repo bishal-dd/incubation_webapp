@@ -25,41 +25,33 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <form>
-                        <!-- Form fields -->
-                        <div class="row mb-3">
-                          <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputText">
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" type="file" id="formFile">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Designation</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" style="height: 100px"></textarea>
-                            </div>
-                          </div>
-                          <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Affiliation</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" style="height: 100px"></textarea>
-                            </div>
-                          </div>
-                       
-                        
-                       
-                      </form>
+               <!-- Vertical Form -->
+              <form action="/dashboard/add_advisor" method="POST" enctype="multipart/form-data" class="row g-3">
+                @csrf
+                <div class="col-12">
+                  <label for="inputNanme4" class="form-label">Name</label>
+                  <input type="text" name="name" class="form-control" id="inputText">
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail4" class="form-label">Photo</label>
+                  <input class="form-control" name="photo" type="file" id="formFile">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Designation</label>
+                  <input type="text" name="designation" class="form-control" id="inputText">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Affiliation</label>
+                  <input type="text" name="affiliation" class="form-control" id="inputText">
+                </div>
+                <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
+ 
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary">Add</button>
                     </div>
+                  </form><!-- Vertical Form -->
                   </div>
                 </div>
               </div><!-- End Modal -->

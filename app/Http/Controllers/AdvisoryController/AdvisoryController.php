@@ -13,11 +13,12 @@ class AdvisoryController extends Controller
         $data = AdvisoryModel::get();
         return view("admin/add_advisory/add_advisory", compact("data"));
     }
-    public function add_slider(Request $request)
+
+    public function add_advisor(Request $request)
     {
-        $files = $request->slider_image;
+        $files = $request->photo;
         $file_name = "";
-        $file_store_path = "slider_images";
+        $file_store_path = "advisor_images";
         if ($files != null && $files != "") {
             if (!is_dir($file_store_path)) {
                 mkdir($file_store_path, 0777, true);
@@ -28,8 +29,9 @@ class AdvisoryController extends Controller
 
         $data = [
             "name" => $request->name,
-            "image" => $file_name,
-            "text" => $request->slider_text,
+            "photo" => $file_name,
+            "designation" => $request->designation,
+            "affiliation" => $request->affiliation,
             "created_at" => date("Y-m-d h:i:s"),
             "created_by" => $request->current_user,
         ];

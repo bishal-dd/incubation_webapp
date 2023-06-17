@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController\LoginController;
 use App\Http\Controllers\SliderController\SliderController;
 use App\Http\Controllers\HomeController\HomeController;
+use App\Http\Controllers\AdvisoryController\AdvisoryController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
@@ -93,6 +94,13 @@ Route::group(["middleware" => ["admin"]], function () {
         SliderController::class,
         "get_slider",
     ])->name("get_slider");
+
+    //Advisory Functions
+
+    Route::post("/dashboard/add_advisor", [
+        AdvisoryController::class,
+        "add_advisor",
+    ])->name("add_advisor");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });
