@@ -31,6 +31,12 @@ Route::get("/about", function () {
 Route::get("/advisory", function () {
     return view("user/advisory/advisory");
 });
+Route::get("/event", function () {
+    return view("user/event/event");
+});
+Route::get("/incubates", function () {
+    return view("user/incubates/incubates");
+});
 
 Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard", function () {
@@ -42,9 +48,7 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard/add_about", function () {
         return view("admin/add_about/add_about");
     });
-    Route::get("/incubates", function () {
-        return view("user/incubates/incubates");
-    });
+    
     Route::get("/dashboard/add_incubates", function () {
         return view("admin/add_incubates/add_incubates");
     });
@@ -77,9 +81,7 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard/add_event", function () {
         return view("admin/add_event/add_event");
     });
-    Route::get("/event", function () {
-        return view("user/event/event");
-    });
+   
     Route::get("/dashboard/view_feedback", function () {
         return view("admin/view_feedback/view_feedback");
     });
