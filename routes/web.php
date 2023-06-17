@@ -48,7 +48,7 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard/add_about", function () {
         return view("admin/add_about/add_about");
     });
-    
+
     Route::get("/dashboard/add_incubates", function () {
         return view("admin/add_incubates/add_incubates");
     });
@@ -79,11 +79,11 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard/add_event", function () {
         return view("admin/add_event/add_event");
     });
-   
+
     Route::get("/dashboard/view_feedback", function () {
         return view("admin/view_feedback/view_feedback");
     });
-    
+
     // Slider functions
     Route::post("/dashboard/add_slider", [
         SliderController::class,
@@ -106,6 +106,25 @@ Route::group(["middleware" => ["admin"]], function () {
         AdvisoryController::class,
         "get_advisor",
     ])->name("get_advisor");
+
+    //Incubates Functions
+
+    Route::post("/dashboard/add_incubates", [
+        IncubatesController::class,
+        "add_incubates",
+    ])->name("add_incubates");
+
+    Route::get("/dashboard/add_incubates", [
+        IncubatesController::class,
+        "get_incubates",
+    ])->name("get_incubates");
+
+    //Stakeholder Functions
+
+    Route::post("/dashboard/add_stakeholder", [
+        StakeholderController::class,
+        "add_stakeholder",
+    ])->name("add_stakeholder");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

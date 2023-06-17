@@ -8,16 +8,16 @@ use App\Models\IncubatesModel\IncubatesModel;
 
 class IncubatesController extends Controller
 {
-    public function get_slider()
+    public function get_incubates()
     {
         $data = IncubatesModel::get();
         return view("admin/add_incubates/add_incubates", compact("data"));
     }
     public function add_incubates(Request $request)
     {
-        $files = $request->slider_image;
+        $files = $request->photo;
         $file_name = "";
-        $file_store_path = "slider_images";
+        $file_store_path = "incubates_images";
         if ($files != null && $files != "") {
             if (!is_dir($file_store_path)) {
                 mkdir($file_store_path, 0777, true);
@@ -27,9 +27,8 @@ class IncubatesController extends Controller
         }
 
         $data = [
-            "name" => $request->name,
-            "image" => $file_name,
-            "text" => $request->slider_text,
+            "photo" => $file_name,
+            "description" => $request->description,
             "created_at" => date("Y-m-d h:i:s"),
             "created_by" => $request->current_user,
         ];

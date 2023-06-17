@@ -13,7 +13,7 @@ class StakeController extends Controller
         $data = StakeholderModel::get();
         return view("admin/add_stakeholder/add_stakeholder", compact("data"));
     }
-    public function add_stakeholderr(Request $request)
+    public function add_stakeholder(Request $request)
     {
         $files = $request->slider_image;
         $file_name = "";
@@ -28,8 +28,8 @@ class StakeController extends Controller
 
         $data = [
             "name" => $request->name,
-            "image" => $file_name,
-            "text" => $request->slider_text,
+            "photo" => $file_name,
+            "designation" => $request->slider_text,
             "created_at" => date("Y-m-d h:i:s"),
             "created_by" => $request->current_user,
         ];
