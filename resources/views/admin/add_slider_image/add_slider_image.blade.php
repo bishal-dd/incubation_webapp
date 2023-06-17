@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Slider Image</label>
-                  <input class="form-control" name="slider_image" type="file" id="formFile">
+                  <input class="form-control" name="slider_image" accept="image/*" type="file" id="formFile">
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Text for Image</label>

@@ -68,9 +68,7 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/stakeholder", function () {
         return view("user/stakeholder/stakeholder");
     });
-    Route::get("/dashboard/add_advisory", function () {
-        return view("admin/add_advisory/add_advisory");
-    });
+
     Route::get("/dashboard/add_mentor", function () {
         return view("admin/add_mentor/add_mentor");
     });
@@ -92,6 +90,11 @@ Route::group(["middleware" => ["admin"]], function () {
         AdvisoryController::class,
         "add_advisor",
     ])->name("add_advisor");
+
+    Route::get("/dashboard/add_advisory", [
+        AdvisoryController::class,
+        "get_advisor",
+    ])->name("get_advisor");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

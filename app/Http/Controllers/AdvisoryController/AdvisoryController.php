@@ -8,7 +8,7 @@ use App\Models\AdvisoryModel\AdvisoryModel;
 
 class AdvisoryController extends Controller
 {
-    public function get_slider()
+    public function get_advisor()
     {
         $data = AdvisoryModel::get();
         return view("admin/add_advisory/add_advisory", compact("data"));
@@ -16,15 +16,20 @@ class AdvisoryController extends Controller
 
     public function add_advisor(Request $request)
     {
-        $files = $request->photo;
+        $file = $request->photo;
         $file_name = "";
         $file_store_path = "advisor_images";
-        if ($files != null && $files != "") {
+
+        if ($file != null && $file->isValid()) {
             if (!is_dir($file_store_path)) {
                 mkdir($file_store_path, 0777, true);
             }
-            $file_name = time() . "_" . $files->getClientOriginalName();
-            move_uploaded_file($files, $file_store_path . "/" . $file_name);
+
+            $original_file_name = $file->getClientOriginalName();
+            $file_name =
+                time() . "_" . str_replace(" ", "_", $original_file_name);
+
+            $file->move($file_store_path, $file_name);
         }
 
         $data = [

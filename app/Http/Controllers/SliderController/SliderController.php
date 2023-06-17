@@ -18,11 +18,16 @@ class SliderController extends Controller
         $files = $request->slider_image;
         $file_name = "";
         $file_store_path = "slider_images";
+
         if ($files != null && $files != "") {
             if (!is_dir($file_store_path)) {
                 mkdir($file_store_path, 0777, true);
             }
-            $file_name = time() . "_" . $files->getClientOriginalName();
+
+            $original_file_name = $files->getClientOriginalName();
+            $file_name =
+                time() . "_" . str_replace(" ", "_", $original_file_name);
+
             move_uploaded_file($files, $file_store_path . "/" . $file_name);
         }
 
