@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController\LoginController;
 use App\Http\Controllers\SliderController\SliderController;
 use App\Http\Controllers\HomeController\HomeController;
 use App\Http\Controllers\AdvisoryController\AdvisoryController;
+use App\Http\Controllers\IncubatesController\IncubatesController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
@@ -106,6 +107,11 @@ Route::group(["middleware" => ["admin"]], function () {
         AdvisoryController::class,
         "add_advisor",
     ])->name("add_advisor");
+
+    Route::post("/dashboard/edit_advisor", [
+        AdvisoryController::class,
+        "edit_advisor",
+    ])->name("edit_advisor");
 
     Route::get("/dashboard/add_advisory", [
         AdvisoryController::class,

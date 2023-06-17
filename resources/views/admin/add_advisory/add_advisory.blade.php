@@ -55,7 +55,46 @@
                   </div>
                 </div>
               </div><!-- End Modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Advisory</button>
+              <!-- Horizontal Form -->
+              <div id="myModal1" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Edit Advisor</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+               <!-- Vertical Form -->
+              <form action="/dashboard/edit_advisor" method="POST" enctype="multipart/form-data" class="row g-3">
+                @csrf
+                <div class="col-12">
+                  <label for="inputNanme4" class="form-label">Name</label>
+                  <input type="text" name="name" class="form-control" id="edit_name">
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail4" class="form-label">Photo</label>
+                  <input class="form-control" name="photo" type="file" accept="image/*" id="edit_photo">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Designation</label>
+                  <input type="text" name="designation" class="form-control" id="edit_designation">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Affiliation</label>
+                  <input type="text" name="affiliation" class="form-control" id="edit_affliliation">
+                </div>
+                <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="edit_id" class="form-control" id="edit_id" >
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Edit</button>
+                    </div>
+                  </form><!-- Vertical Form -->
+                  </div>
+                </div>
+              </div><!-- End Modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Advisors</button>
             </div>
           </div>
         </div>
@@ -102,4 +141,16 @@
       </div>
     </section>
 </main><!-- End #main -->
+<script>
+
+function showedit(data){
+  $('#edit_id').val(data.id);
+  $('#edit_name').val(data.name);
+  $('#edit_designation').val(data.designation);
+  $('#edit_affliliation').val(data.affiliation);
+  $('#edit_photo').val('/advisor_images/' + data.photo);
+  
+}
+
+</script>
 @include('admin.common.js')
