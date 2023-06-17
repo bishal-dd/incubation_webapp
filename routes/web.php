@@ -73,7 +73,16 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard/add_mentor", function () {
         return view("admin/add_mentor/add_mentor");
     });
-
+    Route::get("/dashboard/add_event", function () {
+        return view("admin/add_event/add_event");
+    });
+    Route::get("/event", function () {
+        return view("user/event/event");
+    });
+    Route::get("/dashboard/view_feedback", function () {
+        return view("admin/view_feedback/view_feedback");
+    });
+    
     // Slider functions
     Route::post("/dashboard/add_slider", [
         SliderController::class,

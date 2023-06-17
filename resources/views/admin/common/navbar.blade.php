@@ -101,7 +101,16 @@
               <i class="bi bi-circle"></i><span>Add Stakeholder</span>
             </a>
           </li>
-         
+          <li>
+            <a href="/dashboard/add_event">
+              <i class="bi bi-circle"></i><span>Add Event</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard/view_feedback">
+              <i class="bi bi-circle"></i><span>View Feedback</span>
+            </a>
+          </li>
           
         </ul>
       </li><!-- End Forms Nav -->
