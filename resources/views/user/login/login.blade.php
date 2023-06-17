@@ -16,7 +16,7 @@
 <!-- end page-title -->
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <div style="width: 400px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+  <div style="width: 600px; height: 500px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
     <h2 style="text-align: center; margin-bottom: 20px;">Login</h2>
     <form action="/userlogin" method="POST">
       @csrf
