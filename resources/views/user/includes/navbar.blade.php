@@ -37,7 +37,7 @@
                             </li>
                             <li><a href="/advisory">Advisory</a></li>
                             <li><a href="/login">Login</a></li>
-                            <li><a href="/login">Incubates</a></li>
+                            <li><a href="/incubates">Incubates</a></li>
                             <li><a href="/stakeholder">Stakeholder</a></li>
                             <li><a href="/event">Event</a></li>
                         </ul>
