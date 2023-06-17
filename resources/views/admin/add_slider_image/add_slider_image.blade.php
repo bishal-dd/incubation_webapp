@@ -45,7 +45,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary">Add</button>
                     </div>
                   </form><!-- Vertical Form -->
                   </div>
@@ -73,7 +73,7 @@
                       <th scope="col">Name</th>
                       <th scope="col">Slider Text</th>
                       <th scope="col">Image</th>
-                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -81,10 +81,14 @@
                     <tr>
                       <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
                       <td>{{$datas->name}}</td>
-                      <td><a href="#" class="text-primary">{{$datas->text}}</a></td>
+                      <td>{{$datas->text}}</td>
                       <td><img src="/slider_images/{{$datas->image}}" width="90"></td>
-                      <td><span class="badge bg-success">Approved</span></td>
-                    </tr>
+                      <td>
+                        <form action="/dashboard/delete_slider/{{$datas->id}}" method="POST">
+                          @csrf
+                        <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                        </form>
+                      </tr>
                     @endforeach
                   </tbody>
                 </table>

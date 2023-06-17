@@ -95,6 +95,11 @@ Route::group(["middleware" => ["admin"]], function () {
         "get_slider",
     ])->name("get_slider");
 
+    Route::post("/dashboard/delete_slider/{id}", [
+        SliderController::class,
+        "delete_slider",
+    ])->name("delete_slider");
+
     //Advisory Functions
 
     Route::post("/dashboard/add_advisor", [

@@ -43,4 +43,21 @@ class SliderController extends Controller
 
         return redirect("/dashboard/add_slider_image");
     }
+
+    public function delete_slider($id)
+    {
+        $slider = SliderModel::find($id);
+
+        if ($slider) {
+            $imagePath = public_path("slider_images/" . $slider->image);
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+
+            $slider->delete();
+        }
+
+        return redirect("/dashboard/add_slider_image");
+    }
 }
