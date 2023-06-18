@@ -1,17 +1,7 @@
 @include('user.includes.head')
 @include('user.includes.navbar')
 
-<!-- start page-title -->
-<section class="page-title">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <h2>About Us</h2>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>        
-        <!-- end page-title -->
+
 
         <!-- start about-us-section -->
         <section class="about-us-section section-padding">

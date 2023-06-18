@@ -8,6 +8,11 @@ use App\Models\EventModel\EventModel;
 
 class EventController extends Controller
 {
+    public function event()
+    {
+        $event = EventModel::get();
+        return view("user/event/event", compact("event"));
+    }
     public function get_event()
     {
         $data = EventModel::get();

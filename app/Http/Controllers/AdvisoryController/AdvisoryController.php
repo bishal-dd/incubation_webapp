@@ -8,6 +8,11 @@ use App\Models\AdvisoryModel\AdvisoryModel;
 
 class AdvisoryController extends Controller
 {
+    public function advisory()
+    {
+        $advisor = AdvisoryModel::get();
+        return view("user/advisory/advisory", compact("advisor"));
+    }
     public function get_advisor()
     {
         $data = AdvisoryModel::get();

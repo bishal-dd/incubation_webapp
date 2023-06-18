@@ -9,6 +9,7 @@ use App\Http\Controllers\IncubatesController\IncubatesController;
 use App\Http\Controllers\MentorController\MentorController;
 use App\Http\Controllers\StakeHolderController\StakeholderController;
 use App\Http\Controllers\EventController\EventController;
+use App\Http\Controllers\FeedbackController\FeedbackController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
@@ -32,12 +33,11 @@ Route::get("/about", function () {
     return view("user/about/about");
 });
 
-Route::get("/advisory", function () {
-    return view("user/advisory/advisory");
-});
-Route::get("/event", function () {
-    return view("user/event/event");
-});
+Route::get("/advisory", [AdvisoryController::class, "advisory"])->name(
+    "advisory"
+);
+
+Route::get("/event", [EventController::class, "event"])->name("event");
 Route::get("/incubates", function () {
     return view("user/incubates/incubates");
 });
@@ -48,10 +48,6 @@ Route::group(["middleware" => ["admin"]], function () {
     });
     Route::get("/dashboard/add_about", function () {
         return view("admin/add_about/add_about");
-    });
-
-    Route::get("/dashboard/view_feedback", function () {
-        return view("admin/view_feedback/view_feedback");
     });
 
     // Admin Functions
@@ -193,6 +189,13 @@ Route::group(["middleware" => ["admin"]], function () {
         EventController::class,
         "delete_event",
     ])->name("delete_event");
+
+    // FeedBack Functions
+
+    Route::get("/dashboard/view_feedback", [
+        FeedbackController::class,
+        "view_feedback",
+    ])->name("viewFeedback");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

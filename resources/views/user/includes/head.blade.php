@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="irstheme">
 
-    <title> Dustech - Industry & Factory HTML Template </title>
+    <title> Incubation Center</title>
     
+    <link rel="icon" type="image/png" href="{{asset('logo.png')}}">
     <link href="{{asset('assets/css/themify-icons.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/flaticon.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
