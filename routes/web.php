@@ -225,5 +225,12 @@ Route::group(["middleware" => ["admin"]], function () {
         "view_feedback",
     ])->name("viewFeedback");
 
+    //Application admin routes
+
+    Route::get("/dashboard/view_application", [
+        ApplicationController::class,
+        "view_application",
+    ])->name("view_application");
+
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

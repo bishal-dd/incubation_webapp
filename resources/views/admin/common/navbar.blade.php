@@ -128,6 +128,12 @@
             <span>View Feedback</span>
           </a>
         </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/view_application">
+            <i class="bi bi-grid"></i>
+            <span>View Applications</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->
      
     </ul>

@@ -23,4 +23,10 @@ class ApplicationController extends Controller
 
         return redirect("/");
     }
+
+    public function view_application()
+    {
+        $data = ApplicationModel::get();
+        return view("admin/view_application/view_application", compact("data"));
+    }
 }
