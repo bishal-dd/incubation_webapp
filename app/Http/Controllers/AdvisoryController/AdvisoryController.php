@@ -75,11 +75,28 @@ class AdvisoryController extends Controller
             "photo" => $file_name,
             "designation" => $request->designation,
             "affiliation" => $request->affiliation,
-            "created_at" => date("Y-m-d h:i:s"),
-            "created_by" => $request->current_user,
+            "updated_at" => date("Y-m-d h:i:s"),
+            "updated_by" => $request->current_user,
         ];
 
         AdvisoryModel::where("id", $request->edit_id)->update($data);
+        return redirect("/dashboard/add_advisory");
+    }
+
+    public function delete_advisor($id)
+    {
+        $slider = AdvisoryModel::find($id);
+
+        if ($slider) {
+            $imagePath = public_path("advisor_images/" . $slider->photo);
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+
+            $slider->delete();
+        }
+
         return redirect("/dashboard/add_advisory");
     }
 }

@@ -128,7 +128,13 @@
                       <td><img src="/advisor_images/{{$datas->photo}}" width="90"></td>
                       <td>{{$datas->designation}}</td>
                       <td>{{$datas->affiliation}}</td>
-                      <td><button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button></td>
+                      <td>
+                        <button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>
+                        <form action="/dashboard/delete_advisor/{{$datas->id}}" method="POST">
+                          @csrf
+                        <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                        </form>
+                      </td>
                     </tr>
                     @endforeach
                   </tbody>

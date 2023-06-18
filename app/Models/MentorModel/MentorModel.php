@@ -9,6 +9,6 @@ class MentorModel extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = "t_mentor";
+    protected $table = "t_mentors";
     protected $guarded = [];
 }
