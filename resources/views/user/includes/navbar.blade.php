@@ -1,3 +1,13 @@
+@include('user.includes.head')
+<style>
+    .navbar-image {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+</style>
+        
         <!-- Start header -->
         <header id="header" class="site-header header-style-3">
             <nav class="navigation navbar navbar-default">
@@ -41,7 +51,9 @@
                             <li><a href="/stakeholder">Stakeholder</a></li>
                             <li><a href="/event">Event</a></li>
 
-                                
+                            <div class="navbar-image">
+                                <a href="#"><img src="jnec_logo.png" alt="Your Image" style="width: 70px;"></a>
+                            </div>
                         </ul>
                         
                     </div><!-- end of nav-collapse -->

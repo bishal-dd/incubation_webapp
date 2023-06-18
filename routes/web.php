@@ -7,7 +7,7 @@ use App\Http\Controllers\HomeController\HomeController;
 use App\Http\Controllers\AdvisoryController\AdvisoryController;
 use App\Http\Controllers\IncubatesController\IncubatesController;
 use App\Http\Controllers\MentorController\MentorController;
-use App\Http\Controllers\StakeHolderController\StakeholderController;
+use App\Http\Controllers\StakeholderController\StakeholderController;
 use App\Http\Controllers\EventController\EventController;
 use App\Http\Controllers\FeedbackController\FeedbackController;
 
