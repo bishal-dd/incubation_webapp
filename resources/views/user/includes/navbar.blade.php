@@ -9,7 +9,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index-2.html"><img src="logo.png" height="60"></a>
+                        <a class="navbar-brand" href="index-2.html"><img src="logo2.png" width="1000px"></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navigation-holder">
                         <button class="close-navbar"><i class="ti-close"></i></button>
@@ -40,9 +40,12 @@
                             <li><a href="/incubates">Incubates</a></li>
                             <li><a href="/stakeholder">Stakeholder</a></li>
                             <li><a href="/event">Event</a></li>
-                        </ul>
-                    </div><!-- end of nav-collapse -->
 
+                                
+                        </ul>
+                        
+                    </div><!-- end of nav-collapse -->
+                    
                     
                 </div><!-- end of container -->
             </nav>

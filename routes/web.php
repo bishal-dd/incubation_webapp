@@ -43,6 +43,11 @@ Route::get("/advisory", [AdvisoryController::class, "advisory"])->name(
 );
 
 Route::get("/event", [EventController::class, "event"])->name("event");
+Route::get("/event_details/{id}", [
+    EventController::class,
+    "event_details",
+])->name("event_details");
+
 Route::get("/incubates", [IncubatesController::class, "incubates"])->name(
     "incubates"
 );

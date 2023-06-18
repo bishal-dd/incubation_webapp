@@ -13,6 +13,11 @@ class EventController extends Controller
         $event = EventModel::get();
         return view("user/event/event", compact("event"));
     }
+    public function event_details($id)
+    {
+        $event = EventModel::where("id", $id)->get();
+        return view("user/event/event", compact("event"));
+    }
     public function get_event()
     {
         $data = EventModel::get();
