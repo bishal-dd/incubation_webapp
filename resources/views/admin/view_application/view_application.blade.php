@@ -40,8 +40,6 @@
          <div class="col-12">
             <div class="card recent-sales overflow-auto">
 
-             
-
               <div class="card-body">
                 <h5 class="card-title">Applications</h5>
 
