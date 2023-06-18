@@ -32,7 +32,7 @@
                                     <div class="cats">{{$events->date}}</div>
                                     <h4><a href="#">{{$events->name}}</a></h4>
                                     <p class="date">{{Str::limit($events->description, 150)}}</p> <!-- Limiting to 100 characters -->
-                                    <a href="#" class="read-more">Read More <i class="fi flaticon-next"></i></a>
+                                    <a href="/event_details/{{$events->id}}" class="read-more">Read More <i class="fi flaticon-next"></i></a>
                                 </div>
                             </div>
                             @endforeach

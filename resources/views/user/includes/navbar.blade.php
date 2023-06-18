@@ -1,4 +1,3 @@
-@include('user.includes.head')
 <style>
     .navbar-image {
         position: absolute;
@@ -19,7 +18,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index-2.html"><img src="logo2.png" width="1000px"></a>
+                        <a class="navbar-brand" href="index-2.html"><img src="{{asset('logo2.png')}}" width="1000px"></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navigation-holder">
                         <button class="close-navbar"><i class="ti-close"></i></button>
@@ -52,7 +51,7 @@
                             <li><a href="/event">Event</a></li>
 
                             <div class="navbar-image">
-                                <a href="#"><img src="jnec_logo.png" alt="Your Image" style="width: 70px;"></a>
+                                <a href="#"><img src="{{asset('jnec_logo.png')}}" alt="Your Image" style="width: 70px;"></a>
                             </div>
                         </ul>
                         
