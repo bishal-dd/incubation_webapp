@@ -8,6 +8,11 @@ use App\Models\StakeholderModel\StakeholderModel;
 
 class StakeholderController extends Controller
 {
+    public function stakeholder()
+    {
+        $data = StakeholderModel::get();
+        return view("user/stakeholder/stakeholder", compact("data"));
+    }
     public function get_stakeholder()
     {
         $data = StakeholderModel::get();

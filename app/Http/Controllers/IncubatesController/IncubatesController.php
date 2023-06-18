@@ -8,6 +8,11 @@ use App\Models\IncubatesModel\IncubatesModel;
 
 class IncubatesController extends Controller
 {
+    public function incubates()
+    {
+        $advisor = IncubatesModel::get();
+        return view("user/incubates/incubates", compact("advisor"));
+    }
     public function get_incubates()
     {
         $data = IncubatesModel::get();

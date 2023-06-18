@@ -21,9 +21,14 @@ Route::post("/userlogin", [LoginController::class, "userlogin"])->name(
     "userlogin"
 );
 
-Route::get("/advisory", function () {
-    return view("user/advisory/advisory");
-});
+Route::post("/give_feedback", [
+    FeedbackController::class,
+    "give_feedback",
+])->name("give_feedback");
+
+Route::get("/stakeholder", [StakeholderController::class, "stakeholder"])->name(
+    "stakeholder"
+);
 
 Route::get("/mentor", function () {
     return view("user/mentor/mentor");
@@ -38,9 +43,9 @@ Route::get("/advisory", [AdvisoryController::class, "advisory"])->name(
 );
 
 Route::get("/event", [EventController::class, "event"])->name("event");
-Route::get("/incubates", function () {
-    return view("user/incubates/incubates");
-});
+Route::get("/incubates", [IncubatesController::class, "incubates"])->name(
+    "incubates"
+);
 
 Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard", function () {

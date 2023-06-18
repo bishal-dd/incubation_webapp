@@ -36,7 +36,32 @@
         </section>
         <!-- end of hero slider -->
 
+<!-- start about-us-section -->
+<section class="about-us-section section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col col-md-12">
+          <div class="section-title">
+            <h2>JNEC- Entrepreneurship and Innovation Centre</h2>
+          </div>
+          <div class="details">
+            <p>
+                The JNEC Entrepreneurship and Innovation Centre is set up to provide business support & technology transfer initiative for various sectors in the multidisciplinary areas of science, technology, and humanities in the region. The establishment of the centre is supported by the Department of Employment and Entrepreneurship under the Ministry of Labor and Human Resources through Start-up/CSI Flagship program in 2020.
 
+                The main aim is to produce successful firms that will leave the programme financially viable and independent, through Science and Technology interventions. In particular, the purpose of the JNEC-Entrepreneurship and Innovation Centre is to incubate and materialize the conceptual ideas among the students, faculty members of Jigme Namgyel Engineering College, and other relevant institutions/firms and transform these ideas into value-added products in the commercial market.
+                
+                JNEC-Entrepreneurship and Innovation will nurture budding ventures by providing workspace and shared facilities along with focused counseling. In the centre, the entrepreneurs can receive value-added support and access to critical tools, information, education, networking, resources, and prototype fund in the form of research and development that may otherwise have been unaffordable.
+            </p>
+            
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end about-us-section -->
           <!-- start blog-section -->
           <section class="blog-section section-padding">
             <div class="container">
@@ -59,7 +84,7 @@
                                 <div class="entry-body">
                                     <div class="cats">{{$events->date}}</div>
                                     <h4><a href="#">{{$events->name}}</a></h4>
-                                    <p class="date">{{$events->description}}</p>
+                                    <p class="date">{{Str::limit($events->description, 150)}}</p> <!-- Limiting to 100 characters -->
                                     <a href="#" class="read-more">Read More <i class="fi flaticon-next"></i></a>
                                 </div>
                             </div>
@@ -73,35 +98,7 @@
         <!-- end blog-section -->
 
         
- <!-- start about-us-section -->
- <section class="about-us-section section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col col-md-12">
-          <div class="section-title">
-            <span>About us</span>
-            <h2>We set the standards others try to live up to.</h2>
-          </div>
-          <div class="details">
-            <p>
-              It wasn't a dream. His room, a proper human room although a
-              little too small, lay peacefully between its four familiar
-              walls. A collection of textile samples lay spread out on the
-              table - Samsa was a travelling salesman - and above it there
-              hung a picture that he had recently cut out of an illustrated
-              magazine and housed in a nice, gilded frame. It showed a lady
-              fitted out with a fur hat and fur boa who sat upright
-            </p>
-            
-            
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <!-- end container -->
-  </section>
-  <!-- end about-us-section -->
+ 
        
 
   <!-- start feedback-section -->
@@ -121,18 +118,19 @@
                 <div class="right-col">
                     <div class="quote-area" style="padding: 20px">
                         <h3>Feedback</h3>
-                        <form method="post" action="/give_feedback" class="contact-validation-active" id="contact-quote-form">
+                        <form action="/give_feedback" method="POST" enctype="multipart/form-data" class="contact-validation-active">
+                            @csrf
                             <div>
-                                <input type="text"  class="form-control" name="name" id="name" placeholder="Name*">
+                                <input type="text"  class="form-control" name="name" id="name" placeholder="Name*" required>
                             </div><br>
                             <div>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required>
                             </div>
                             <div><br>
-                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone*">
+                                <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone*" required>
                             </div><br>
                             <div>
-                                <textarea class="form-control" name="note"  id="note" placeholder="Case Description..." rows="4"></textarea>
+                                <textarea class="form-control" name="note"  id="note" placeholder="Message..." rows="4" required></textarea>
                             </div><br>
                             <div class="submit-area">
                                 <button type="submit" class="theme-btn">Sent</button>
