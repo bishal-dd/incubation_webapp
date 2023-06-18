@@ -58,7 +58,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="/dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -101,17 +101,6 @@
               <i class="bi bi-circle"></i><span>Add Stakeholder</span>
             </a>
           </li>
-          <li>
-            <a href="/dashboard/add_event">
-              <i class="bi bi-circle"></i><span>Add Event</span>
-            </a>
-          </li>
-          <li>
-            <a href="/dashboard/view_feedback">
-              <i class="bi bi-circle"></i><span>View Feedback</span>
-            </a>
-          </li>
-          
         </ul>
       </li><!-- End Forms Nav -->
       
@@ -125,30 +114,21 @@
               <i class="bi bi-circle"></i><span>Add Admin</span>
             </a>
           </li>
-        
-        
-         
-         
           
         </ul>
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/add_event">
+            <i class="bi bi-grid"></i>
+            <span>Event Management</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/view_feedback">
+            <i class="bi bi-grid"></i>
+            <span>View Feedback</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->
-
-  
-
-     
-
-
-
-
-      
-
-      
-
-    
-    
-   
-
- 
      
     </ul>
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\AdvisoryController\AdvisoryController;
 use App\Http\Controllers\IncubatesController\IncubatesController;
 use App\Http\Controllers\MentorController\MentorController;
 use App\Http\Controllers\StakeHolderController\StakeholderController;
+use App\Http\Controllers\EventController\EventController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
@@ -47,10 +48,6 @@ Route::group(["middleware" => ["admin"]], function () {
     });
     Route::get("/dashboard/add_about", function () {
         return view("admin/add_about/add_about");
-    });
-
-    Route::get("/dashboard/add_event", function () {
-        return view("admin/add_event/add_event");
     });
 
     Route::get("/dashboard/view_feedback", function () {
@@ -175,6 +172,27 @@ Route::group(["middleware" => ["admin"]], function () {
         StakeholderController::class,
         "delete_stakeholder",
     ])->name("delete_stakeholder");
+
+    // Event Functions
+    Route::get("/dashboard/add_event", [
+        EventController::class,
+        "get_event",
+    ])->name("get_event");
+
+    Route::post("/dashboard/add_event", [
+        EventController::class,
+        "add_event",
+    ])->name("add_event");
+
+    Route::post("/dashboard/edit_event", [
+        EventController::class,
+        "edit_event",
+    ])->name("edit_event");
+
+    Route::post("/dashboard/delete_event/{id}", [
+        EventController::class,
+        "delete_event",
+    ])->name("delete_event");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

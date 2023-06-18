@@ -27,28 +27,71 @@
                     <div class="modal-body">
 
                        <!-- Vertical Form -->
-              <form class="row g-3">
+              <form action="/dashboard/add_event" method="POST" enctype="multipart/form-data" class="row g-3">
+                @csrf
                 <div class="col-12">
                   <label for="inputNanme4" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="inputText">
+                  <input type="text" class="form-control" name="name" id="inputText">
                 </div>
                 <div class="col-12">
-                  <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" type="file" id="formFile">
+                  <label for="inputEmail4" class="form-label">Image</label>
+                  <input class="form-control" name="event_image" type="file" id="formFile">
                 </div>
                 <div class="col-12">
-                  <label for="inputPassword4" class="form-label">Designation</label>
-                  <input type="text" class="form-control" id="inputText">
+                  <label for="inputPassword4" class="form-label">Date</label>
+                  <input type="date" name="date" class="form-control"  id="inputText">
                 </div>
                 <div class="col-12">
-                  <label for="inputPassword4" class="form-label">Affiliation</label>
-                  <input type="text" class="form-control" id="inputText">
+                  <label for="inputPassword4" class="form-label">Description</label>
+                  <textarea class="form-control" name="description" style="height: 100px"></textarea>
                 </div>
-                      
-                  
+                <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form><!-- Vertical Form -->
+                      
+                    </div>
+                   
+                  </div>
+                </div>
+              </div><!-- End Modal -->
+               <!-- Horizontal Form -->
+               <div id="myModal1" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Form Modal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                       <!-- Vertical Form -->
+              <form action="/dashboard/edit_event" method="POST" enctype="multipart/form-data" class="row g-3">
+                @csrf
+                <div class="col-12">
+                  <label for="inputNanme4" class="form-label">Name</label>
+                  <input type="text" class="form-control" name="name"  id="edit_name">
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail4" class="form-label">Image</label>
+                  <input class="form-control" name="event_image" type="file"  id="edit_image">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Date</label>
+                  <input type="date" name="date" class="form-control"  id="edit_date">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Description</label>
+                  <textarea class="form-control" name="description" style="height: 100px" id="edit_description"></textarea>
+                </div>
+                <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="edit_id" class="form-control" id="edit_id" >
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Edit</button>
                     </div>
                   </form><!-- Vertical Form -->
                       
@@ -76,20 +119,31 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Customer</th>
-                      <th scope="col">Product</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Status</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Image</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Action</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($data as $datas)
                     <tr>
-                      <th scope="row"><a href="#">#2457</a></th>
-                      <td>Brandon Jacob</td>
-                      <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                      <td>$64</td>
-                      <td><span class="badge bg-success">Approved</span></td>
+                      <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
+                      <td>{{$datas->name}}</td>
+                      <td><img src="/event_images/{{$datas->image}}" width="90"></td>
+                      <td>{{$datas->date}}</td>
+                      <td>{{$datas->description}}</td>
+                      <td>
+                        <button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>
+                        <form action="/dashboard/delete_event/{{$datas->id}}" method="POST">
+                          @csrf
+                        <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                        </form>
+                      </td>                    
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
 
@@ -100,4 +154,15 @@
       </div>
     </section>
 </main><!-- End #main -->
+<script>
+
+function showedit(data){
+  $('#edit_id').val(data.id);
+  $('#edit_name').val(data.name);
+  $('#edit_description').val(data.description);
+  $('#edit_date').val(data.date);
+  $('#edit_photo').val('/advisor_images/' + data.photo);
+  
+}
+</script>
 @include('admin.common.js')
