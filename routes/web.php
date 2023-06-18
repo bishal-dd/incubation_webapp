@@ -10,9 +10,11 @@ use App\Http\Controllers\MentorController\MentorController;
 use App\Http\Controllers\StakeholderController\StakeholderController;
 use App\Http\Controllers\EventController\EventController;
 use App\Http\Controllers\FeedbackController\FeedbackController;
+use App\Http\Controllers\ApplicationController\ApplicationController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
+// Login Routes
 Route::get("/login", function () {
     return view("user/login/login");
 });
@@ -20,7 +22,23 @@ Route::get("/login", function () {
 Route::post("/userlogin", [LoginController::class, "userlogin"])->name(
     "userlogin"
 );
+///////
 
+// Application Routes
+Route::get("/application", function () {
+    return view("user/application/application");
+});
+
+Route::get("/application_process", function () {
+    return view("user/application_process/application_process");
+});
+
+Route::post("/submit_application", [
+    ApplicationController::class,
+    "submit_application",
+])->name("submit_application");
+
+///////
 Route::post("/give_feedback", [
     FeedbackController::class,
     "give_feedback",

@@ -29,26 +29,17 @@
                             </li>
                             <li><a href="/about">About Us</a></li>
                             <li class="menu-item-has-children">
-                                <a href="#">Blog</a>
+                                <a href="#">committee</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                    <li><a href="blog-fullwidth.html">Blog full width</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#Level3">Blog single</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-single.html">Blog single</a></li>
-                                            <li><a href="blog-single-left-sidebar.html">Blog single left sidebar</a></li>
-                                            <li><a href="blog-single-fullwidth.html">Blog single full width</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="/advisory">Advisory</a></li>
+                                    <li><a href="/stakeholder">Stakeholder</a></li>
+                                    <li><a href="/mentor">Mentors</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/advisory">Advisory</a></li>
-                            <li><a href="/login">Login</a></li>
+                            <li><a href="/application_process">Application Process</a></li>
                             <li><a href="/incubates">Incubates</a></li>
-                            <li><a href="/stakeholder">Stakeholder</a></li>
-                            <li><a href="/event">Event</a></li>
+                            <li><a href="/event">Events</a></li>
+                            <li><a href="/login">Login</a></li>
 
                             <div class="navbar-image">
                                 <a href="#"><img src="{{asset('jnec_logo.png')}}" alt="Your Image" style="width: 70px;"></a>
