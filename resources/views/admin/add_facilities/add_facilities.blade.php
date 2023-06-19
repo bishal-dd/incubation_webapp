@@ -35,8 +35,11 @@
                 </div>  
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" type="file" name="photo" id="formFile">
-                </div>
+                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo" >
+                  <p id="fileError2" class="red-text">You should upload more than 1 photo</p>
+                  <p id="fileError2" class="red-text">You can press <b>ctrl</b> and select multiple images</p>
+
+                </div>            
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Description</label>
                   <textarea class="form-control" name="description" style="height: 100px"></textarea>
@@ -75,7 +78,10 @@
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" name="photo" type="file" accept="image/*" id="edit_photo">
+                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo" onchange="validateFileUploads(this)">
+                  <p id="fileError" class="red-text" style="display: none;">You should upload more than 1 photo</p>
+                  <p id="fileError" class="red-text" style="display: none;">You can press <b>ctrl</b> and select multiple images</p>
+
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Details</label>
@@ -123,7 +129,15 @@
                     <tr>
                       <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
                       <td>{{$datas->name}}</td>
-                      <td><img src="/facilities_images/{{$datas->photo}}" width="90"></td>
+                      <td>
+                                @if($datas->photo)
+                                @php
+                                    $photos = explode(",", $datas->photo);
+                                @endphp
+                                @foreach($photos as $photo)
+                                    <img src="/facilities_images/{{$photo}}" width="90">
+                                @endforeach
+                            @endif</td>
                       <td>{{$datas->details}}</td>
                       <td> 
                         <button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>

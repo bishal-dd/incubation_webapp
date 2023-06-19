@@ -8,6 +8,11 @@ use App\Models\FacilityModel\FacilityModel;
 
 class FacilityController extends Controller
 {
+    public function facilities()
+    {
+        $data = FacilityModel::get();
+        return view("user/facilities/facilities", compact("data"));
+    }
     public function get_facilities()
     {
         $data = FacilityModel::get();
@@ -15,20 +20,22 @@ class FacilityController extends Controller
     }
     public function add_facilities(Request $request)
     {
-        $files = $request->photo;
-        $file_name = "";
-        $file_store_path = "facilities_images";
-        if ($files != null && $files != "") {
-            if (!is_dir($file_store_path)) {
-                mkdir($file_store_path, 0777, true);
+        $fileNames = []; // Initialize the array here
+
+        if ($request->hasFile("photos")) {
+            $photos = $request->file("photos");
+            $fileNames = [];
+
+            foreach ($photos as $photo) {
+                $fileName = time() . "_" . $photo->getClientOriginalName();
+                $photo->move("facilities_images", $fileName);
+                $fileNames[] = $fileName;
             }
-            $file_name = time() . "_" . $files->getClientOriginalName();
-            move_uploaded_file($files, $file_store_path . "/" . $file_name);
         }
 
         $data = [
             "name" => $request->name,
-            "photo" => $file_name,
+            "photo" => implode(",", $fileNames),
             "details" => $request->description,
             "created_at" => date("Y-m-d h:i:s"),
             "created_by" => $request->current_user,

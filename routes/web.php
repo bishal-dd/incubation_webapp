@@ -71,6 +71,12 @@ Route::get("/incubates", [IncubatesController::class, "incubates"])->name(
     "incubates"
 );
 
+// facilities
+
+Route::get("/facilities", [FacilityController::class, "facilities"])->name(
+    "facilities"
+);
+
 Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard", function () {
         return view("admin/dashboard/dashboard");

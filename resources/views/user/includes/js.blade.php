@@ -2,20 +2,16 @@
    <footer class="site-footer">
     <div class="upper-footer">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col col-lg-3 col-md-3 col-sm-6">
                     <div class="widget about-widget">
                         <div class="logo widget-title">
-                            <img src="assets/images/footer-logo.png" alt>
+                            <img src="logo2.png" alt>
                         </div>
-                        <p>Mikago arm towards the viewer gregor then turned to look out the window at the dull weather</p>
+                        <p>"Creativity is Thinking of New Ideas, But Innovation is Putting them into Action"</p>
                         <div class="social-icons">
                             <ul>
-                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                                <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                                <li><a href="#"><i class="ti-vimeo-alt"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100083341237045"><i class="ti-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -27,15 +23,7 @@
                         </div>
                         <ul>
                             <li><a href="#">About us</a></li>
-                            <li><a href="#">Our services</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Meet team</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Provacu Policy</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">JNEC</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,49 +33,15 @@
                             <h3>Our Address</h3>
                         </div>
                         <ul>
-                            <li>25/19 Duel aveniew, new Booston town, Ghana</li>
-                            <li><span>Phone:</span> 84667441</li>
-                            <li><span>Email:</span> demo@example.com</li>
-                            <li><span>Office Time:</span> 10AM- 5PM</li>
+                            <li>Samdrup Jongkhar, Dewathang, Jigme Namgyel Engineering Colleye</li>
+                            <li><span>Phone:</span> +975-07-260202</li>
+                            <li><span>Email:</span> helpdeskjnec@gmail.com</li>
+                            <li><span>Office Time:</span> 9AM - 5PM</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col col-lg-3 col-md-3 col-sm-6">
-                    <div class="widget newsletter-widget">
-                        <div class="widget-title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>You will be notified when somthing new will be appear.</p>
-                        <form>
-                            <div class="input-1">
-                                <input type="email" class="form-control" placeholder="Email Address *" required>
-                            </div>
-                            <div class="submit clearfix">
-                                <button type="submit"><i class="ti-email"></i></button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div> <!-- end container -->
-    </div>
-    <div class="lower-footer">
-        <div class="container">
-            <div class="row">
-                <div class="separator"></div>
-                <div class="col col-xs-12">
-                    <p class="copyright"><a href="templateshub.net">Templates Hub</a></p>
-                    <div class="extra-link">
-                        <ul>
-                            <li><a href="#">Privace & Policy</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
 <!-- end site-footer -->
@@ -107,7 +61,3 @@
 
 <!-- dustech/index-3.html  13 Nov 2019 12:55:21 GMT -->
 </html>
-
- 
- 
- 
