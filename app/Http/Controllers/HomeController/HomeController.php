@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SliderModel\SliderModel;
 use App\Models\EventModel\EventModel;
+use App\Models\HomeModel\HomeModel;
 use App\Models\VisitorModel\VisitorModel;
 use Illuminate\Support\Carbon;
 
@@ -17,7 +18,11 @@ class HomeController extends Controller
         $event = EventModel::latest()
             ->take(3)
             ->get();
-        return view("user/home/home", compact("Slider", "event"));
+        $home_content = HomeModel::first();
+        return view(
+            "user/home/home",
+            compact("Slider", "event", "home_content")
+        );
     }
 
     public function dashboard()
@@ -45,5 +50,24 @@ class HomeController extends Controller
                 "yearlyVisitors"
             )
         );
+    }
+
+    public function add_home()
+    {
+        $data = HomeModel::get();
+        return view("admin/add_home/add_home", compact("data"));
+    }
+
+    public function edit_home(Request $request)
+    {
+        $data = [
+            "title" => $request->name,
+            "content" => $request->description,
+            "updated_at" => date("Y-m-d h:i:s"),
+            "updated_by" => $request->current_user,
+        ];
+
+        HomeModel::where("id", $request->edit_id)->update($data);
+        return redirect("/dashboard/add_home");
     }
 }

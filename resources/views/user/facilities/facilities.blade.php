@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>Blog</h2>
+                        <h2>Facilities</h2>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->

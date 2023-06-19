@@ -81,6 +81,17 @@ Route::group(["middleware" => ["admin"]], function () {
     Route::get("/dashboard", [HomeController::class, "dashboard"])->name(
         "dashboard"
     );
+
+    // Add Home content Routes
+    Route::get("/dashboard/add_home", [
+        HomeController::class,
+        "add_home",
+    ])->name("add_home");
+
+    Route::post("/dashboard/edit_home", [
+        HomeController::class,
+        "edit_home",
+    ])->name("edit_home");
     Route::get("/dashboard/add_about", function () {
         return view("admin/add_about/add_about");
     });

@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Contact No.</label>
-                  <input type="number" name="contact_no" class="form-control" id="inputText">
+                  <input type="number" name="contact_no" class="form-control" id="inputText" pattern="[0-9]{8}">
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Status:</label>
@@ -91,7 +91,7 @@
                   </div>
                   <div class="col-12">
                     <label for="inputPassword4" class="form-label">Contact No.</label>
-                    <input type="number" name="edit_contact_no" class="form-control" id="edit_number">
+                    <input type="number" name="edit_contact_no" class="form-control" id="edit_number" pattern="[0-9]{8}">
                   </div>
                   <div class="col-12">
                     <label for="inputPassword4" class="form-label">Status:</label>

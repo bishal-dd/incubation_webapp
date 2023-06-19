@@ -119,7 +119,6 @@
               <i class="bi bi-circle"></i><span>Add Admin</span>
             </a>
           </li>
-          
         </ul>
         <li class="nav-item">
           <a class="nav-link " href="/dashboard/add_event">
@@ -137,6 +136,13 @@
           <a class="nav-link " href="/dashboard/view_application">
             <i class="bi bi-text-left"></i>
             <span>View Applications</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/add_home">
+            <i class="bi bi-text-left"></i>
+            <span>Home Page Content</span>
           </a>
         </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->

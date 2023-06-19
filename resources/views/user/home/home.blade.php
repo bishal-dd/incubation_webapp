@@ -42,15 +42,11 @@
       <div class="row">
         <div class="col col-md-12">
           <div class="section-title">
-            <h2>JNEC- Entrepreneurship and Innovation Centre</h2>
+            <h2>{{$home_content->title}}</h2>
           </div>
           <div class="details">
             <p>
-                The JNEC Entrepreneurship and Innovation Centre is set up to provide business support & technology transfer initiative for various sectors in the multidisciplinary areas of science, technology, and humanities in the region. The establishment of the centre is supported by the Department of Employment and Entrepreneurship under the Ministry of Labor and Human Resources through Start-up/CSI Flagship program in 2020.
-
-                The main aim is to produce successful firms that will leave the programme financially viable and independent, through Science and Technology interventions. In particular, the purpose of the JNEC-Entrepreneurship and Innovation Centre is to incubate and materialize the conceptual ideas among the students, faculty members of Jigme Namgyel Engineering College, and other relevant institutions/firms and transform these ideas into value-added products in the commercial market.
-                
-                JNEC-Entrepreneurship and Innovation will nurture budding ventures by providing workspace and shared facilities along with focused counseling. In the centre, the entrepreneurs can receive value-added support and access to critical tools, information, education, networking, resources, and prototype fund in the form of research and development that may otherwise have been unaffordable.
+                {{$home_content->content}}
             </p>
             
             

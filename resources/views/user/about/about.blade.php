@@ -10,7 +10,6 @@
                     <div class="col col-md-12">
                         <div class="section-title">
                             <span><h2>About us</h2></span>
-                            <h1>JNEC- ENTREPRENEURSHIP AND INNOVATION CENTRE</h1>
                         </div>
                         <h2>Vision</h2>
                         <p>“Infuse the culture of fostering start-up and MSME infused with GNH values in realizing and meeting the self-reliance goals of the nation.”</p>
@@ -20,10 +19,10 @@
                               
                         <h2>Objectives</h2>
                      <ul>
-                        <li>-Identify and recruit small businesses with technology applications having employment generation potentials and opportunities within the region.</li>
-                        <li>-To create entrepreneurial opportunities for the students.</li>
-                        <li>-Encourage and support student entrepreneurs through a supportive environment that helps them establish their business ideas and develop their concepts into market-ready products.</li>
-                        <li>-Contribute to the growth and success of emerging engineering technology.</li>
+                        <li>Identify and recruit small businesses with technology applications having employment generation potentials and opportunities within the region.</li>
+                        <li>To create entrepreneurial opportunities for the students.</li>
+                        <li>Encourage and support student entrepreneurs through a supportive environment that helps them establish their business ideas and develop their concepts into market-ready products.</li>
+                        <li>Contribute to the growth and success of emerging engineering technology.</li>
                      </ul>
                  </div>
                  <!-- end container -->

@@ -2,7 +2,7 @@
    <footer class="site-footer">
     <div class="upper-footer">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row ">
                 <div class="col col-lg-3 col-md-3 col-sm-6">
                     <div class="widget about-widget">
                         <div class="logo widget-title">
