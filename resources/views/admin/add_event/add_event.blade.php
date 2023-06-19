@@ -136,10 +136,10 @@
                       <td>{{$datas->date}}</td>
                       <td>{{$datas->description}}</td>
                       <td>
-                        <button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>
+                        <button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1" style="width: 100px">Edit</button>
                         <form action="/dashboard/delete_event/{{$datas->id}}" method="POST">
                           @csrf
-                        <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                        <button type="submit" class="btn btn-danger mt-3" style="width: 100px">Delete</button>
                         </form>
                       </td>                    
                     </tr>

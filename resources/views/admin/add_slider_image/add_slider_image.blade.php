@@ -86,7 +86,7 @@
                       <td>
                         <form action="/dashboard/delete_slider/{{$datas->id}}" method="POST">
                           @csrf
-                        <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                        <button type="submit" class="btn btn-danger mt-3" style="width: 100px">Delete</button>
                         </form>
                       </tr>
                     @endforeach

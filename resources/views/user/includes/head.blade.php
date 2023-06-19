@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="irstheme">
 
-    <title> Incubation Center</title>
+    <title> JNEC-EIC</title>
     
     <link rel="icon" type="image/png" href="{{asset('logo.png')}}">
     <link href="{{asset('assets/css/themify-icons.css')}}" rel="stylesheet">

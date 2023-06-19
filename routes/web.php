@@ -78,9 +78,9 @@ Route::get("/facilities", [FacilityController::class, "facilities"])->name(
 );
 
 Route::group(["middleware" => ["admin"]], function () {
-    Route::get("/dashboard", function () {
-        return view("admin/dashboard/dashboard");
-    });
+    Route::get("/dashboard", [HomeController::class, "dashboard"])->name(
+        "dashboard"
+    );
     Route::get("/dashboard/add_about", function () {
         return view("admin/add_about/add_about");
     });

@@ -40,10 +40,10 @@
                                 @endif
                             @endif
                                 <ul class="entry-meta">
-                                    <li><a href="#"><i class="ti-book"></i> Oil&gas, Chemical</a></li>
+                                    <li><a href="#"></a></li>
                                 </ul>
                                 <h3><a href="#">{{$datas->name}}</a></h3>
-                                <p>A collection of textile samples lay spread out on the table samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright</p>
+                                <p>{{$datas->details}}</p>
                                 
                             </div>
                             @endforeach
