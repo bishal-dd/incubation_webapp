@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="details">
                                     <h4><a href="/event_details/{{$datas->id}}">{{$datas->name}}</a></h4>
-                                    <span class="date"><i class="ti-timer"></i>Oct 31 2019</span>
+                                    <span class="date"><i class="ti-timer"></i>{{$datas->date}}</span>
                                 </div>
                             </div>
                             @endforeach

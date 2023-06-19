@@ -101,6 +101,11 @@
               <i class="bi bi-circle"></i><span>Add Stakeholder</span>
             </a>
           </li>
+          <li>
+            <a href="/dashboard/add_facilities">
+              <i class="bi bi-circle"></i><span>Add Facilities</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Forms Nav -->
       

@@ -11,6 +11,7 @@ use App\Http\Controllers\StakeholderController\StakeholderController;
 use App\Http\Controllers\EventController\EventController;
 use App\Http\Controllers\FeedbackController\FeedbackController;
 use App\Http\Controllers\ApplicationController\ApplicationController;
+use App\Http\Controllers\FacilityController\FacilityController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
@@ -231,6 +232,28 @@ Route::group(["middleware" => ["admin"]], function () {
         ApplicationController::class,
         "view_application",
     ])->name("view_application");
+
+    // Facilities Admin Routes
+
+    Route::get("/dashboard/add_facilities", [
+        FacilityController::class,
+        "get_facilities",
+    ])->name("get_facilities");
+
+    Route::post("/dashboard/add_facilities", [
+        FacilityController::class,
+        "add_facilities",
+    ])->name("add_facilities");
+
+    Route::post("/dashboard/edit_facilities", [
+        FacilityController::class,
+        "edit_facilities",
+    ])->name("edit_facilities");
+
+    Route::post("/dashboard/delete_facilities/{id}", [
+        FacilityController::class,
+        "delete_facilities",
+    ])->name("delete_facilities");
 
     Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });

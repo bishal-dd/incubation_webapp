@@ -27,7 +27,7 @@
                     <div class="modal-body">
 
                        <!-- Vertical Form -->
-              <form action="/dashboard/add_incubates"  method="POST" enctype="multipart/form-data" class="row g-3">
+              <form action="/dashboard/add_facilities"  method="POST" enctype="multipart/form-data" class="row g-3">
                 @csrf
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Name</label>
@@ -62,12 +62,12 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Edit Advisor</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Edit Facilities</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                <!-- Vertical Form -->
-              <form action="/dashboard/edit_incubates" method="POST" enctype="multipart/form-data" class="row g-3">
+              <form action="/dashboard/edit_facilities" method="POST" enctype="multipart/form-data" class="row g-3">
                 @csrf
                 <div class="col-12">
                   <label for="inputNanme4" class="form-label">Name</label>
@@ -78,7 +78,7 @@
                   <input class="form-control" name="photo" type="file" accept="image/*" id="edit_photo">
                 </div>
                 <div class="col-12">
-                  <label for="inputPassword4" class="form-label">Description</label>
+                  <label for="inputPassword4" class="form-label">Details</label>
                   <textarea class="form-control" name="description" id="edit_description" style="height: 100px"></textarea>
                 </div>
                 <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
@@ -93,7 +93,7 @@
                 </div>
               </div><!-- End Modal -->
 
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Incubates</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Facilities</button>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@
              
 
               <div class="card-body">
-                <h5 class="card-title">Description</h5>
+                <h5 class="card-title">Facilities</h5>
 
                 <table class="table table-borderless datatable">
                   <thead>
@@ -114,7 +114,7 @@
                       <th scope="col">#</th>
                       <th scope="col">Name</th>
                       <th scope="col">Image</th>
-                      <th scope="col">Description</th>
+                      <th scope="col">Details</th>
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
@@ -123,11 +123,11 @@
                     <tr>
                       <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
                       <td>{{$datas->name}}</td>
-                      <td><img src="/incubates_images/{{$datas->photo}}" width="90"></td>
-                      <td>{{$datas->description}}</td>
+                      <td><img src="/facilities_images/{{$datas->photo}}" width="90"></td>
+                      <td>{{$datas->details}}</td>
                       <td> 
                         <button type="button" onClick="showedit({{ $datas }})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button>
-                        <form action="/dashboard/delete_incubates/{{$datas->id}}" method="POST">
+                        <form action="/dashboard/delete_facilities/{{$datas->id}}" method="POST">
                           @csrf
                         <button type="submit" class="btn btn-danger mt-3">Delete</button>
                         </form></td>
@@ -148,7 +148,7 @@
   function showedit(data){
     $('#edit_id').val(data.id);
     $('#edit_name').val(data.name);
-    $('#edit_description').val(data.description);    
+    $('#edit_description').val(data.details);    
   }
   
   </script>
