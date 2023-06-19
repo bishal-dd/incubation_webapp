@@ -17,6 +17,8 @@ Route::get("/", [HomeController::class, "home"])->name("home");
 
 Route::get("/about", [HomeController::class, "about"])->name("about");
 
+Route::get("/forms", [HomeController::class, "forms"])->name("forms");
+
 // Login Routes
 Route::get("/login", function () {
     return view("user/login/login");
@@ -91,6 +93,7 @@ Route::group(["middleware" => ["admin"]], function () {
         "edit_home",
     ])->name("edit_home");
 
+    // About
     Route::get("/dashboard/add_about", [
         HomeController::class,
         "add_about",
@@ -100,6 +103,22 @@ Route::group(["middleware" => ["admin"]], function () {
         HomeController::class,
         "edit_about",
     ])->name("edit_about");
+
+    // Document
+    Route::post("/dashboard/add_documents", [
+        HomeController::class,
+        "add_documents",
+    ])->name("add_documents");
+
+    Route::post("/dashboard/delete_documents/{id}", [
+        HomeController::class,
+        "delete_documents",
+    ])->name("delete_documents");
+
+    Route::get("/dashboard/add_documents", [
+        HomeController::class,
+        "get_documents",
+    ])->name("get_documents");
 
     // Admin Functions
     Route::get("/dashboard/add_admin", [

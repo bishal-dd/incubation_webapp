@@ -45,12 +45,7 @@
                         <div class="widget-title">
                             <h3>Downloads</h3>
                         </div>
-                        <div>
-                            <ul>
-
-                        <li>You will be notified when somthing new will be appear.</li>
-                            </ul>
-                        </div>
+                        <a href="/forms"> <p>Forms</p></a>
                     </div>
                 </div>
             </div>

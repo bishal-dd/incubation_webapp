@@ -146,6 +146,12 @@
             <span>About Page Content</span>
           </a>
         </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/add_documents">
+            <i class="bi bi-text-left"></i>
+            <span>Documents</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->
      
     </ul>

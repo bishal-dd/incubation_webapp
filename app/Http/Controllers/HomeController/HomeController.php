@@ -9,6 +9,7 @@ use App\Models\EventModel\EventModel;
 use App\Models\HomeModel\HomeModel;
 use App\Models\VisitorModel\VisitorModel;
 use App\Models\AboutModel\AboutModel;
+use App\Models\DocumentModel\DocumentModel;
 use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
@@ -97,5 +98,59 @@ class HomeController extends Controller
 
         AboutModel::where("id", $request->edit_id)->update($data);
         return redirect("/dashboard/add_about");
+    }
+
+    public function get_documents()
+    {
+        $data = DocumentModel::get();
+        return view("admin/add_documents/add_documents", compact("data"));
+    }
+
+    public function add_documents(Request $request)
+    {
+        $files = $request->photo;
+        $file_name = "";
+        $file_store_path = "documents";
+        if ($files != null && $files != "") {
+            if (!is_dir($file_store_path)) {
+                mkdir($file_store_path, 0777, true);
+            }
+            $file_name = time() . "_" . $files->getClientOriginalName();
+            move_uploaded_file($files, $file_store_path . "/" . $file_name);
+        }
+
+        $data = [
+            "name" => $request->name,
+            "file" => $file_name,
+            "created_at" => date("Y-m-d h:i:s"),
+            "created_by" => $request->current_user,
+        ];
+
+        DocumentModel::create($data);
+
+        return redirect("/dashboard/add_documents");
+    }
+
+    public function delete_documents($id)
+    {
+        $slider = DocumentModel::find($id);
+
+        if ($slider) {
+            $imagePath = public_path("documents/" . $slider->file);
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+
+            $slider->delete();
+        }
+
+        return redirect("/dashboard/add_documents");
+    }
+
+    public function forms()
+    {
+        $data = DocumentModel::get();
+        return view("user/forms/forms", compact("data"));
     }
 }
