@@ -15,6 +15,8 @@ use App\Http\Controllers\FacilityController\FacilityController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
+Route::get("/about", [HomeController::class, "about"])->name("about");
+
 // Login Routes
 Route::get("/login", function () {
     return view("user/login/login");
@@ -53,10 +55,6 @@ Route::get("/mentor", function () {
     return view("user/mentor/mentor");
 });
 
-Route::get("/about", function () {
-    return view("user/about/about");
-});
-
 Route::get("/advisory", [AdvisoryController::class, "advisory"])->name(
     "advisory"
 );
@@ -92,9 +90,16 @@ Route::group(["middleware" => ["admin"]], function () {
         HomeController::class,
         "edit_home",
     ])->name("edit_home");
-    Route::get("/dashboard/add_about", function () {
-        return view("admin/add_about/add_about");
-    });
+
+    Route::get("/dashboard/add_about", [
+        HomeController::class,
+        "add_about",
+    ])->name("add_about");
+
+    Route::post("/dashboard/edit_about", [
+        HomeController::class,
+        "edit_about",
+    ])->name("edit_about");
 
     // Admin Functions
     Route::get("/dashboard/add_admin", [

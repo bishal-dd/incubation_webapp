@@ -13,14 +13,9 @@
                                 <div data-swiper-parallax="300" class="slide-title">
                                     <h2>{{$Sliders->text}}</h2>
                                 </div>
-                                <div data-swiper-parallax="400" class="slide-text">
-                                    <p>Recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa</p>
-                                </div>
+                                
                                 <div class="clearfix"></div>
-                                <div data-swiper-parallax="500" class="slide-btns">
-                                    <a href="#" class="theme-btn">Our services</a> 
-                                    <a href="#" class="theme-btn-s2">More about us</a> 
-                                </div>
+                               
                             </div>
                         </div> <!-- end slide-inner --> 
                     </div> <!-- end swiper-slide -->
@@ -36,28 +31,34 @@
         </section>
         <!-- end of hero slider -->
 
-<!-- start about-us-section -->
-<section class="about-us-section section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col col-md-12">
-          <div class="section-title">
-            <h2>{{$home_content->title}}</h2>
-          </div>
-          <div class="details">
-            <p>
-                {{$home_content->content}}
-            </p>
-            
-            
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <!-- end container -->
-  </section>
-  <!-- end about-us-section -->
+          <!-- start about-us-section -->
+          <section class="about-us-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="section-title">
+                            <h2>{{$home_content->title}}</h2>
+                        </div>
+                        <div class="details">
+                            <p> {{$home_content->content}}</p>
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="right-col">
+                            <div class="img-holder">
+                                <img src="assets/images/JNEC.jpeg" height="400" alt>
+                            </div>
+                            <div class="video-holder">
+                                <a href="{{$home_content->link}}" class="hero-video-btn video-btn"  data-type="iframe" tabindex="0"><i class="fi flaticon-play-button"></i>Watch our intro video</a> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-us-section -->
+
           <!-- start blog-section -->
           <section class="blog-section section-padding">
             <div class="container">

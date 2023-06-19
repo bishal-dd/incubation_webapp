@@ -8,6 +8,7 @@ use App\Models\SliderModel\SliderModel;
 use App\Models\EventModel\EventModel;
 use App\Models\HomeModel\HomeModel;
 use App\Models\VisitorModel\VisitorModel;
+use App\Models\AboutModel\AboutModel;
 use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
@@ -23,6 +24,12 @@ class HomeController extends Controller
             "user/home/home",
             compact("Slider", "event", "home_content")
         );
+    }
+
+    public function about()
+    {
+        $data = AboutModel::first();
+        return view("user/about/about", compact("data"));
     }
 
     public function dashboard()
@@ -63,11 +70,32 @@ class HomeController extends Controller
         $data = [
             "title" => $request->name,
             "content" => $request->description,
+            "link" => $request->link,
             "updated_at" => date("Y-m-d h:i:s"),
             "updated_by" => $request->current_user,
         ];
 
         HomeModel::where("id", $request->edit_id)->update($data);
         return redirect("/dashboard/add_home");
+    }
+
+    public function add_about()
+    {
+        $data = AboutModel::get();
+        return view("admin/add_about/add_about", compact("data"));
+    }
+
+    public function edit_about(Request $request)
+    {
+        $data = [
+            "vision" => $request->vision,
+            "mission" => $request->mission,
+            "objectives" => $request->objectives,
+            "updated_at" => date("Y-m-d h:i:s"),
+            "updated_by" => $request->current_user,
+        ];
+
+        AboutModel::where("id", $request->edit_id)->update($data);
+        return redirect("/dashboard/add_about");
     }
 }

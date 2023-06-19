@@ -33,6 +33,10 @@
                   <input type="text" name="name" class="form-control" id="edit_name">
                 </div>
                 <div class="col-12">
+                    <label for="inputNanme4" class="form-label">Youtube link</label>
+                    <input type="text" name="link" class="form-control" id="edit_link">
+                  </div>
+                <div class="col-12">
                   <label for="inputPassword4" class="form-label">Content</label>
                   <textarea class="form-control" name="description" id="edit_description" style="height: 100px"></textarea>
                 </div>
@@ -97,7 +101,9 @@
   function showedit(data){
     $('#edit_id').val(data.id);
     $('#edit_name').val(data.title);
-    $('#edit_description').val(data.content);    
+    $('#edit_description').val(data.content);
+    $('#edit_link').val(data.link);
+
   }
   
   </script>

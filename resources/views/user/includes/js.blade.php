@@ -40,6 +40,19 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col col-lg-3 col-md-3 col-sm-6">
+                    <div class="widget newsletter-widget">
+                        <div class="widget-title">
+                            <h3>Downloads</h3>
+                        </div>
+                        <div>
+                            <ul>
+
+                        <li>You will be notified when somthing new will be appear.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div> <!-- end container -->
     </div>

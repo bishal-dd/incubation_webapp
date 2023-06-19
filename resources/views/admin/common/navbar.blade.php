@@ -82,11 +82,6 @@
             </a>
           </li>
           <li>
-            <a href="/dashboard/add_about">
-              <i class="bi bi-circle"></i><span>Add About</span>
-            </a>
-          </li>
-          <li>
             <a href="/dashboard/add_incubates">
               <i class="bi bi-circle"></i><span>Add Incubates</span>
             </a>
@@ -143,6 +138,12 @@
           <a class="nav-link " href="/dashboard/add_home">
             <i class="bi bi-text-left"></i>
             <span>Home Page Content</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/add_about">
+            <i class="bi bi-text-left"></i>
+            <span>About Page Content</span>
           </a>
         </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->
