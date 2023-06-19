@@ -35,11 +35,11 @@
                 </div>  
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo" >
-                  <p id="fileError2" class="red-text">You should upload more than 1 photo</p>
-                  <p id="fileError2" class="red-text">You can press <b>ctrl</b> and select multiple images</p>
-
-                </div>            
+                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="photo" onchange="validateForm()" required="Please upload at least 2 photos" oninvalid="this.setCustomValidity('Please add more than one image')"
+                  onvalid="this.setCustomValidity('')">
+                  <p id="fileError2" class="red-text" style="display: none;">You should upload more than 1 photo</p>
+                  <p id="fileError2" class="red-text" style="display: none;">You can press <b>ctrl</b> and select multiple images</p>
+                </div>        
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Description</label>
                   <textarea class="form-control" name="description" style="height: 100px"></textarea>
@@ -78,11 +78,12 @@
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo" onchange="validateFileUploads(this)">
-                  <p id="fileError" class="red-text" style="display: none;">You should upload more than 1 photo</p>
-                  <p id="fileError" class="red-text" style="display: none;">You can press <b>ctrl</b> and select multiple images</p>
-
-                </div>
+                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo"  required="Please upload at least 2 photos" oninvalid="this.setCustomValidity('Please add more than one image')"
+                  onvalid="this.setCustomValidity('')">
+                  <p id="fileError2_edit" class="red-text" style="display: none;">You should upload at least 2 photos</p>
+                  <p id="fileError2_ctrl" class="red-text" style="display: none;">You can press <b>ctrl</b> and select multiple images</p>
+                </div>                
+                
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Details</label>
                   <textarea class="form-control" name="description" id="edit_description" style="height: 100px"></textarea>
@@ -158,6 +159,7 @@
     </section>
 </main><!-- End #main -->
 <script>
+
 
   function showedit(data){
     $('#edit_id').val(data.id);

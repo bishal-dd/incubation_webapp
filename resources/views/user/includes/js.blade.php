@@ -11,7 +11,7 @@
                         <p>"Creativity is Thinking of New Ideas, But Innovation is Putting them into Action"</p>
                         <div class="social-icons">
                             <ul>
-                                <li><a href="https://www.facebook.com/profile.php?id=100083341237045"><i class="ti-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100083341237045" target="_blank"><i class="ti-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>
