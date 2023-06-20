@@ -1,10 +1,9 @@
-@include('user.includes.head')
+
 
 <style>
     .navbar-image {
         position: absolute;
         right: 0;
-        
         top: 50%;
         transform: translateY(-45%);
     }
@@ -12,7 +11,7 @@
         
         <!-- Start header -->
         <header id="header" class="site-header header-style-3">
-            <nav class="navigation navbar navbar-default" style="height: 10px" >
+            <nav class="navigation navbar navbar-default" >
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="open-btn">
@@ -64,4 +63,3 @@
         </header>
         <!-- end of header -->
 
-        
