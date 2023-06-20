@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>Incubation Advisory Board</h2>
+                        <h2>Advisory Board</h2>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
@@ -20,10 +20,14 @@
                 <div class="row">
                     <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
                         <div class="section-title-s5">
-                            <p>The JNEC Entrepreneurship and Innovation Centre Advisory Board advises on
+                            <span>Our Advisors</span>
+                            <h2>Dedicated Advisors</h2>
+                            <p>
+                                The JNEC Entrepreneurship and Innovation Centre Advisory Board advises on
                                 programming the ideas, opportunities, and resources critical to building and
                                 growing the JNEC-EIC startup incubator programs to support students, staffs and
-                                adjoining community.</p>
+                                adjoining community.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -34,7 +38,7 @@
                             <div class="grid">
                                 <div class="img-social">
                                     <div class="img-holder">
-                                        <img src="advisor_images/{{$advisors->photo}}" alt>
+                                        <img src="advisor_images/{{$advisors->photo}}" height="250" alt="{{$advisors->name}}">
                                     </div>
                                 </div>
                                 <div class="details">
@@ -44,11 +48,11 @@
                                 </div>
                             </div>
                             @endforeach
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end container -->
-        </section>
+            </div>
+        </div> <!-- end container -->
+    </section>
         <!-- end team-section -->
 @include('user.includes.js')

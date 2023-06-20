@@ -29,10 +29,6 @@
               <form action="/dashboard/add_slider" method="POST" enctype="multipart/form-data" class="row g-3">
                 @csrf
                 <div class="col-12">
-                  <label for="inputNanme4" class="form-label">Name</label>
-                  <input type="text" name="name" class="form-control" id="inputText">
-                </div>
-                <div class="col-12">
                   <label for="inputEmail4" class="form-label">Slider Image</label>
                   <input class="form-control" name="slider_image" accept="image/*" type="file" id="formFile">
                 </div>
@@ -70,7 +66,7 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Name</th>
+                      
                       <th scope="col">Slider Text</th>
                       <th scope="col">Image</th>
                       <th scope="col">Action</th>
@@ -80,7 +76,6 @@
                     @foreach($data as $datas)
                     <tr>
                       <th scope="row"><a href="#">#{{ $loop->iteration }}</a></th>
-                      <td>{{$datas->name}}</td>
                       <td>{{$datas->text}}</td>
                       <td><img src="/slider_images/{{$datas->image}}" width="90"></td>
                       <td>

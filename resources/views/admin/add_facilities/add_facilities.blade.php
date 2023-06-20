@@ -78,8 +78,7 @@
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Photo</label>
-                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo"  required="Please upload at least 2 photos" oninvalid="this.setCustomValidity('Please add more than one image')"
-                  onvalid="this.setCustomValidity('')">
+                  <input class="form-control" type="file" accept="image/*" name="photos[]" multiple id="edit_photo"  required>
                   <p id="fileError2_edit" class="red-text" style="display: none;">You should upload at least 2 photos</p>
                   <p id="fileError2_ctrl" class="red-text" style="display: none;">You can press <b>ctrl</b> and select multiple images</p>
                 </div>                

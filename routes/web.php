@@ -53,9 +53,7 @@ Route::get("/stakeholder", [StakeholderController::class, "stakeholder"])->name(
     "stakeholder"
 );
 
-Route::get("/mentor", function () {
-    return view("user/mentor/mentor");
-});
+Route::get("/mentor", [MentorController::class, "mentor"])->name("mentor");
 
 Route::get("/advisory", [AdvisoryController::class, "advisory"])->name(
     "advisory"

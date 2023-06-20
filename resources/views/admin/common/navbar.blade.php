@@ -68,7 +68,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-hand-index"></i><span>Actions</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-hand-index"></i><span>Content Management</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -104,17 +104,7 @@
         </ul>
       </li><!-- End Forms Nav -->
       
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-people"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="/dashboard/add_admin">
-              <i class="bi bi-circle"></i><span>Add Admin</span>
-            </a>
-          </li>
-        </ul>
+      
         <li class="nav-item">
           <a class="nav-link " href="/dashboard/add_event">
             <i class="bi bi-calendar2-event"></i>
@@ -136,24 +126,35 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/dashboard/add_home">
-            <i class="bi bi-text-left"></i>
+            <i class="bi bi-shop"></i>
             <span>Home Page Content</span>
           </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item">
           <a class="nav-link " href="/dashboard/add_about">
-            <i class="bi bi-text-left"></i>
+            <i class="bi bi-pencil-square"></i>
             <span>About Page Content</span>
           </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item">
           <a class="nav-link " href="/dashboard/add_documents">
-            <i class="bi bi-text-left"></i>
+            <i class="bi bi-receipt"></i>
             <span>Documents</span>
           </a>
         </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->
-     
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/dashboard/add_admin">
+              <i class="bi bi-circle"></i><span>Add Admin</span>
+            </a>
+          </li>
+        </ul>
+      </li>
     </ul>
 
   </aside><!-- End Sidebar-->

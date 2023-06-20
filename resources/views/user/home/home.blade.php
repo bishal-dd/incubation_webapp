@@ -2,6 +2,22 @@
 @include('user.includes.head')
 @include('user.includes.navbar')
 
+<style>
+  #note::placeholder {
+        color: #000000; /* Adjust the color as desired */
+    }
+    #phone::placeholder {
+        color: #000000; /* Adjust the color as desired */
+    }
+    #email::placeholder {
+        color: #000000; /* Adjust the color as desired */
+    }
+    #name::placeholder {
+        color: #000000; /* Adjust the color as desired */
+    }
+  
+    </style>
+
         <!-- start of hero -->
         <section class="hero-slider hero-style-3">
             <div class="swiper-container">
@@ -118,13 +134,14 @@
                         <form action="/give_feedback" method="POST" enctype="multipart/form-data" class="contact-validation-active">
                             @csrf
                             <div>
-                                <input type="text"  class="form-control" name="name" id="name" placeholder="Name*" required>
+                                <input type="text"  class="form-control" name="name" id="name" placeholder="Name*" style="height: 45px" required>
+                            </div><br>
+
+                            <div>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*" style="height: 45px" required>
                             </div><br>
                             <div>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required>
-                            </div>
-                            <div><br>
-                                <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone*" required>
+                                <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone*" style="height: 45px" required>
                             </div><br>
                             <div>
                                 <textarea class="form-control" name="note"  id="note" placeholder="Message..." rows="4" required></textarea>

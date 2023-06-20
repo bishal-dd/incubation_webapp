@@ -99,4 +99,11 @@ class MentorController extends Controller
 
         return redirect("/dashboard/add_mentor");
     }
+
+    public function mentor()
+    {
+        $data = MentorModel::get();
+
+        return view("user/mentor/mentor", compact("data"));
+    }
 }

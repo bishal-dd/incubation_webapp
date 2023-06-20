@@ -16,7 +16,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $Slider = SliderModel::get();
+        $Slider = SliderModel::latest()->get();
         $event = EventModel::latest()
             ->take(3)
             ->get();

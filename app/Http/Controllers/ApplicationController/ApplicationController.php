@@ -21,7 +21,7 @@ class ApplicationController extends Controller
 
         ApplicationModel::create($data);
 
-        return redirect("/");
+        return redirect("/application_process");
     }
 
     public function view_application()

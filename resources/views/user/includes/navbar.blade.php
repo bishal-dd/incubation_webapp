@@ -1,15 +1,18 @@
+@include('user.includes.head')
+
 <style>
     .navbar-image {
         position: absolute;
         right: 0;
+        
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-45%);
     }
 </style>
         
         <!-- Start header -->
         <header id="header" class="site-header header-style-3">
-            <nav class="navigation navbar navbar-default">
+            <nav class="navigation navbar navbar-default" style="height: 10px" >
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="open-btn">
@@ -18,7 +21,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index-2.html"><img src="{{asset('logo2.png')}}" width="1000px"></a>
+                        <a class="navbar-brand" href="/"><img src="{{asset('logo2.png')}}" ></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navigation-holder">
                         <button class="close-navbar"><i class="ti-close"></i></button>
@@ -49,7 +52,7 @@
                             <li><a href="/login">Login</a></li>
 
                             <div class="navbar-image">
-                                <a href="#"><img src="{{asset('jnec_logo.png')}}" alt="Your Image" style="width: 70px;"></a>
+                                <a href="#"><img src="{{asset('jnec_logo.png')}}" alt="Your Image" style="width: 80px;"></a>
                             </div>
                         </ul>
                         
@@ -60,3 +63,5 @@
             </nav>
         </header>
         <!-- end of header -->
+
+        

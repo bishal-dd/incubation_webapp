@@ -20,7 +20,9 @@
                 <div class="row">
                     <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
                         <div class="section-title-s5">
-                            <p>Hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him</p>
+                            <span>Our Stakeholders</span>
+                            <h2>Dedicated Stakeholders</h2>
+                            <p>As a stakeholder, they are an individual, group, or organization with a vested interest in a specific project, organization, or initiative. Their involvement and contributions directly or indirectly impact the outcomes and decisions related to the endeavor.</p>
                         </div>
                     </div>
                 </div>

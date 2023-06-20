@@ -2,7 +2,7 @@
 @include('admin.common.navbar')
 <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Form Layouts</h1>
+      <h1>Advisors</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -107,7 +107,7 @@
              
 
               <div class="card-body">
-                <h5 class="card-title">Name</h5>
+                <h5 class="card-title">Advisors</h5>
 
                 <table class="table table-borderless datatable">
                   <thead>

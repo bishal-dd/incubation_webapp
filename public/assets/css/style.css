@@ -641,7 +641,7 @@ img {
 	#page title
 ******************************/
 .page-title {
-    background: url("../images/JNEC.jpeg") center center/cover no-repeat local;
+    background: url("../images/cover.jpg") center center/cover no-repeat local;
     width: 100%;
     height: 430px;
     position: relative;

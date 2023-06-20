@@ -20,27 +20,32 @@
                 <div class="row">
                     <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
                         <div class="section-title-s5">
-                            <span>Our Mentor</span>
-                            <h2>Dedicated Mentor</h2>
-                            <p>Hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him</p>
+                            <span>Our Mentors</span>
+                            <h2>Dedicated Mentors</h2>
+                            <p>As a mentor, their role is to provide guidance, support, and share their wealth of knowledge and experiences with individuals seeking to develop their skills and achieve their goals. With their expertise in a specific field or industry, they are dedicated to helping them grow both personally and professionally.
+
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="team-grids">
+                            @foreach($data as $datas)
                             <div class="grid">
                                 <div class="img-social">
                                     <div class="img-holder">
-                                        <img src="assets/images/team/img-1.jpg" alt>
+                                        <img src="/mentor_images/{{$datas->photo}}" alt>
                                     </div>
                                 </div>
                                     <div class="details">
-                                        <h3>Michel Jhon</h3>
-                                        <span>Mechanical Engineering</span>
+                                        <h3>{{$datas->name}}</h3>
+                                        <span>{{$datas->designation}}</span>
+                                        <p>{{$datas->affiliation}}</p>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

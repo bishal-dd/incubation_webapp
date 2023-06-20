@@ -19,11 +19,13 @@
                 <div class="col col-lg-3 col-md-3 col-sm-6">
                     <div class="widget link-widget">
                         <div class="widget-title">
-                            <h3>Usefull Links</h3>
+                            <h3>Useful Links</h3>
                         </div>
                         <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">JNEC</a></li>
+                            <li><a href="/about">About us</a></li>
+                            <li><a href="https://www.jnec.edu.bt/en/" target="_blank">JNEC</a></li>
+                            <li><a href="https://www.rub.edu.bt/" target="_blank">RUB</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -33,9 +35,9 @@
                             <h3>Our Address</h3>
                         </div>
                         <ul>
-                            <li>Samdrup Jongkhar, Dewathang, Jigme Namgyel Engineering Colleye</li>
+                            <li>Samdrup Jongkhar, Dewathang, Jigme Namgyel Engineering College</li>
                             <li><span>Phone:</span> +975-07-260202</li>
-                            <li><span>Email:</span> helpdeskjnec@gmail.com</li>
+                            <li><span>Email:</span> <a href="mailto:helpdeskjnec@gmail.com">helpdeskjnec@gmail.com</a></li>
                             <li><span>Office Time:</span> 9AM - 5PM</li>
                         </ul>
                     </div>

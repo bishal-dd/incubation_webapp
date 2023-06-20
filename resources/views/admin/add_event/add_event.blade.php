@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-12">
                   <label for="inputEmail4" class="form-label">Image</label>
-                  <input class="form-control" name="event_image" type="file"  id="edit_image">
+                  <input class="form-control" name="event_image" type="file" accept="image/*"  id="edit_image">
                 </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Date</label>

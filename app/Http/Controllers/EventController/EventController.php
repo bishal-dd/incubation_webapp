@@ -10,7 +10,7 @@ class EventController extends Controller
 {
     public function event()
     {
-        $event = EventModel::get();
+        $event = EventModel::latest()->get();
 
         return view("user/event/event", compact("event"));
     }

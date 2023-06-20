@@ -1,7 +1,24 @@
 @include('user.includes.head')
 @include('user.includes.navbar')
 
-
+<style>
+    #name::placeholder {
+          color: #000000; /* Adjust the color as desired */
+      }
+      #email::placeholder {
+          color: #000000; /* Adjust the color as desired */
+      }
+      #phone::placeholder {
+          color: #000000; /* Adjust the color as desired */
+      }
+      #age::placeholder {
+          color: #000000; /* Adjust the color as desired */
+      }
+      #idea::placeholder {
+          color: #000000; /* Adjust the color as desired */
+      }
+    
+      </style>
 <!-- start contact-pg-section -->
 <section class="contact-pg-section section-padding">
     <div class="container">

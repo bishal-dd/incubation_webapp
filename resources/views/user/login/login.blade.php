@@ -1,22 +1,10 @@
 @include('user.includes.head')
 @include('user.includes.navbar')
 
-<!-- start page-title -->
-<section class="page-title">
-  <div class="container">
-    <div class="row">
-      <div class="col col-xs-12">
-        <h2>Login</h2>
-      </div>
-    </div>
-    <!-- end row -->
-  </div>
-  <!-- end container -->
-</section>
-<!-- end page-title -->
+
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <div style="width: 400px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+  <div style="width: 500px; padding: 50px; border: 1px solid #ccc; border-radius: 5px; height:400px">
     <h2 style="text-align: center; margin-bottom: 20px;">Login</h2>
     <form action="/userlogin" method="POST">
       @csrf

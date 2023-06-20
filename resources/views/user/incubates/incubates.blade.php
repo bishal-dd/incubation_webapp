@@ -20,6 +20,8 @@
                 <div class="row">
                     <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
                         <div class="section-title-s5">
+                            <span>Our Incubates</span>
+                            <h2>Dedicated Incubates</h2>
                             <p>The JNEC Entrepreneurship and Innovation Centre Advisory Board advises on
                                 programming the ideas, opportunities, and resources critical to building and
                                 growing the JNEC-EIC startup incubator programs to support students, staffs and
@@ -39,8 +41,7 @@
                                 </div>
                                 <div class="details">
                                     <h3>{{$advisors->name}}</h3>
-                                    <span>{{$advisors->description}}</span><br>
-                                    <span>{{$advisors->affiliation}}</span>
+                                    <p>{{$advisors->description}}</p>
                                 </div>
                             </div>
                             @endforeach

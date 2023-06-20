@@ -31,7 +31,6 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
               </div>
             </div>
@@ -62,7 +61,16 @@
                       <td>{{$datas->name}}</td>
                       <td>{{$datas->age}}</td>
                       <td><a href="mailto:{{$datas->email}}">{{$datas->email}}</a></td>
-                      <td>{{$datas->phone_no}}</td>
+                      <td>
+                        <a
+                        href='https://api.whatsapp.com/send?phone={{$datas->phone_no}}'
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {{$datas->phone_no}}
+                        </a>
+                      
+                      </td>
                       <td> <button type="button" onclick="showmodal({{$datas}})" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                         View Idea
                       </button></td>                 
