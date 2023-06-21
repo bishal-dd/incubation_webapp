@@ -142,6 +142,12 @@
             <span>Documents</span>
           </a>
         </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="/dashboard/add_FAQ">
+            <i class="bi bi-receipt"></i>
+            <span>FAQ</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
       </li><!-- End Forms Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">

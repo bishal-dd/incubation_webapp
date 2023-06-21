@@ -12,6 +12,7 @@ use App\Http\Controllers\EventController\EventController;
 use App\Http\Controllers\FeedbackController\FeedbackController;
 use App\Http\Controllers\ApplicationController\ApplicationController;
 use App\Http\Controllers\FacilityController\FacilityController;
+use App\Http\Controllers\FAQController\FAQController;
 
 Route::get("/", [HomeController::class, "home"])->name("home");
 
@@ -28,6 +29,11 @@ Route::post("/userlogin", [LoginController::class, "userlogin"])->name(
     "userlogin"
 );
 ///////
+
+// FAQ
+Route::get("/FAQ", [FAQController::class, "FAQ"])->name("FAQ");
+
+//
 
 // Application Routes
 Route::get("/application", function () {
@@ -80,6 +86,23 @@ Route::group(["middleware" => ["admin"]], function () {
         "dashboard"
     );
 
+    // FAQ
+    Route::get("/dashboard/add_FAQ", [FAQController::class, "get_FAQ"])->name(
+        "get_FAQ"
+    );
+    Route::post("/dashboard/add_FAQ", [FAQController::class, "add_FAQ"])->name(
+        "add_FAQ"
+    );
+    Route::post("/dashboard/edit_FAQ", [
+        FAQController::class,
+        "edit_FAQ",
+    ])->name("add_FAQ");
+    Route::post("/dashboard/delete_FAQ/{id}", [
+        FAQController::class,
+        "delete_FAQ",
+    ])->name("delete_FAQ");
+
+    //
     // Add Home content Routes
     Route::get("/dashboard/add_home", [
         HomeController::class,

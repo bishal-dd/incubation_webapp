@@ -26,6 +26,7 @@
                             <li><a href="/about">About us</a></li>
                             <li><a href="https://www.jnec.edu.bt/en/" target="_blank">JNEC</a></li>
                             <li><a href="https://www.rub.edu.bt/" target="_blank">RUB</a></li>
+                            <li><a href="/FAQ">Frequently Asked Questions</a></li>
 
                         </ul>
                     </div>
