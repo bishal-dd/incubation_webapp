@@ -56,7 +56,7 @@
                             <h2>{{$home_content->title}}</h2>
                         </div>
                         <div class="details">
-                            <p> {{$home_content->content}}</p>
+                            <p style="text-align: justify"> {{$home_content->content}}</p>
                         </div>
                     </div>
                     <div class="col col-md-6">
@@ -147,7 +147,7 @@
                                 <textarea class="form-control" name="note"  id="note" placeholder="Message..." rows="4" required></textarea>
                             </div><br>
                             <div class="submit-area">
-                                <button type="submit" class="theme-btn">Sent</button>
+                                <button type="submit" class="theme-btn">Send</button>
                                 <div id="loader">
                                     <i class="ti-reload"></i>
                                 </div>

@@ -38,7 +38,7 @@
                   </div>
                 <div class="col-12">
                   <label for="inputPassword4" class="form-label">Content</label>
-                  <textarea class="form-control" name="description" id="edit_description" style="height: 100px"></textarea>
+                  <textarea class="form-control" name="description" id="edit_description" style="height: 100px; text-align: justify;"></textarea>
                 </div>
                 <input type="hidden" name="current_user" class="form-control" id="current_user" value="{{ Auth::user()->id }}">
                 <input type="hidden" name="edit_id" class="form-control" id="edit_id" >

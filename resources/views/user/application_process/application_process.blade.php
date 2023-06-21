@@ -15,7 +15,6 @@
                                 <h3>Stage I: Application Submission</h3>
                                 <p>The application for admission to the JNEC-EIC is to be made to the Incubation Manager
                                     in the form of an Application Questionnaire (attached application form in Annexure II).</p>
-                                
                             </div>
                             <div>
                                 <h3>Stage II: Initial evaluation and Proposal Submission</h3>

@@ -11,7 +11,8 @@
                         <p>"Creativity is Thinking of New Ideas, But Innovation is Putting them into Action"</p>
                         <div class="social-icons">
                             <ul>
-                                <li><a href="https://www.facebook.com/profile.php?id=100083341237045" target="_blank"><i class="ti-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100083341237045" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/1200px-Facebook_f_logo_%282021%29.svg.png" width="35"></a></li>
+                                <li><a href="https://www.facebook.com/jigmenamgyelengineeringcollege" target="_blank"><img src="https://www.jnec.edu.bt/wp-content/uploads/2020/02/New-JNEC-Logo-Transparent-SVG-1.png" width="40"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -47,7 +48,7 @@
                         <div class="widget-title">
                             <h3>Downloads</h3>
                         </div>
-                        <a href="/forms"> <p>Forms</p></a>
+                        <a href="/forms"><p style="color: blue">Forms</p></a>
                     </div>
                 </div>
             </div>
