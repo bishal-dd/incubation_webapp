@@ -35,13 +35,13 @@
                             <div class="grid">
                                 <div class="img-social">
                                     <div class="img-holder">
-                                        <img src="/mentor_images/{{$datas->photo}}" alt>
+                                        <img src="/mentor_images/{{$datas->photo}}"  height="250" alt>
                                     </div>
                                 </div>
                                     <div class="details">
                                         <h3>{{$datas->name}}</h3>
                                         <span>{{$datas->designation}}</span>
-                                        <p>{{$datas->affiliation}}</p>
+                                        <span>{{$datas->affiliation}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -53,5 +53,7 @@
         </div> <!-- end container -->
         </section>
         <!-- end team-section -->
+
+        
 
         @include('user.includes.js')

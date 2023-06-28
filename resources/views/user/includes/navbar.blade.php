@@ -34,14 +34,15 @@
                                 <a href="#">committee</a>
                                 <ul class="sub-menu">
                                     <li><a href="/advisory">Advisory</a></li>
-                                    <li><a href="/stakeholder">Stakeholder</a></li>
+                                    <li><a href="/stakeholder">Stakeholder/Ecosystem</a></li>
                                     <li><a href="/mentor">Mentors</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="#">Eco System</a>
+                                <a href="#">Incubation</a>
                                 <ul class="sub-menu">
-                                    <li><a href="/incubates">Incubates</a></li>
+                                    <li><a href="/incubates">Profile of Manager</a></li>
+                                    <li><a href="/incubates">Incubation </a></li>
                                     <li><a href="/facilities">Facilities</a></li>
                                 </ul>
                             </li>
