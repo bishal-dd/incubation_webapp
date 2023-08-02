@@ -46,7 +46,7 @@
                         </div>
                         <ul>
                             <li>25/19 Duel aveniew, new Booston town, Ghana</li>
-                            <li><span>Phone:</span> 84667441</li>
+                            <li><span>Phone:</span> 17915066</li>
                             <li><span>Email:</span> demo@example.com</li>
                             <li><span>Office Time:</span> 10AM- 5PM</li>
                         </ul>

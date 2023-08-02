@@ -43,7 +43,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="/incubates">Profile of Manager</a></li>
                                     <li><a href="/incubates">Incubation </a></li>
-                                    <li><a href="/facilities">Facilities</a></li>
+                                    <li><a href="/facilities">Facilities/Services</a></li>
                                 </ul>
                             </li>
                             <li><a href="/application_process">Application Process</a></li>

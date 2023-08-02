@@ -1,12 +1,12 @@
 @include('user.includes.head')
 @include('user.includes.navbar')
 
-        <!-- start page-title -->
-        <section class="page-title">
+         <!-- start page-title -->
+         <section class="page-title">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>Mentor</h2>
+                        <h2>Mentors</h2>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
@@ -22,8 +22,12 @@
                         <div class="section-title-s5">
                             <span>Our Mentors</span>
                             <h2>Dedicated Mentors</h2>
-                            <p>As a mentor, their role is to provide guidance, support, and share their wealth of knowledge and experiences with individuals seeking to develop their skills and achieve their goals. With their expertise in a specific field or industry, they are dedicated to helping them grow both personally and professionally.
-
+                            <p>
+                                As a mentor, their role is to provide guidance, support, and 
+                                share their wealth of knowledge and experiences with individuals 
+                                seeking to develop their skills and achieve their goals. With 
+                                their expertise in a specific field or industry, they are 
+                                dedicated to helping them grow both personally and professionally.
                             </p>
                         </div>
                     </div>
@@ -35,14 +39,13 @@
                             <div class="grid">
                                 <div class="img-social">
                                     <div class="img-holder">
-                                        <img src="/mentor_images/{{$datas->photo}}"  height="250" alt>
+                                        <img src="mentor_images/{{$datas->photo}}" height="250" alt="{{$datas->name}}">
                                     </div>
                                 </div>
-                                    <div class="details">
-                                        <h3>{{$datas->name}}</h3>
-                                        <span>{{$datas->designation}}</span>
-                                        <span>{{$datas->affiliation}}</span>
-                                    </div>
+                                <div class="details">
+                                    <h3>{{$datas->name}}</h3>
+                                    <span>{{$datas->designation}}</span><br>
+                                    <span>{{$datas->affiliation}}</span>
                                 </div>
                             </div>
                             @endforeach
@@ -51,9 +54,6 @@
                 </div>
             </div>
         </div> <!-- end container -->
-        </section>
+    </section>
         <!-- end team-section -->
-
-        
-
-        @include('user.includes.js')
+@include('user.includes.js')

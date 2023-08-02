@@ -37,7 +37,7 @@
                         </div>
                         <ul>
                             <li>Samdrup Jongkhar, Dewathang, Jigme Namgyel Engineering College</li>
-                            <li><span>Phone:</span> +975-07-260202</li>
+                            <li><span>Phone:</span> +975-17915066</li>
                             <li><span>Email:</span> <a href="mailto:helpdeskjnec@gmail.com">helpdeskjnec@gmail.com</a></li>
                             <li><span>Office Time:</span> 9AM - 5PM</li>
                         </ul>
